@@ -526,7 +526,11 @@ compiler_rcc_clean:
 qrc_res.cpp: ../VirtualShutterClient/res.qrc \
 		../VirtualShutterClient/res/smalle-header.jpg \
 		../VirtualShutterClient/res/header.jpg \
-		/media/root/PHILIPS/smalle-header.jpg
+		../VirtualShutterClient/res/connect-icon.png \
+		../VirtualShutterClient/res/icon-03.png \
+		../VirtualShutterClient/res/connect-icon.png \
+		../VirtualShutterClient/res/icon-02.png \
+		../VirtualShutterClient/res/icon-01.png
 	/opt/Qt5.6.0/5.6/gcc_64/bin/rcc -name res ../VirtualShutterClient/res.qrc -o qrc_res.cpp
 
 compiler_moc_header_make_all: moc_mainwindow.cpp
@@ -899,11 +903,12 @@ mainwindow.o: ../VirtualShutterClient/mainwindow.cpp ../VirtualShutterClient/mai
 		/opt/Qt5.6.0/5.6/gcc_64/include/QtGui/qinputmethod.h \
 		/opt/Qt5.6.0/5.6/gcc_64/include/QtWidgets/QButtonGroup \
 		/opt/Qt5.6.0/5.6/gcc_64/include/QtWidgets/qbuttongroup.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtWidgets/QFrame \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtWidgets/qframe.h \
 		/opt/Qt5.6.0/5.6/gcc_64/include/QtWidgets/QHeaderView \
 		/opt/Qt5.6.0/5.6/gcc_64/include/QtWidgets/qheaderview.h \
 		/opt/Qt5.6.0/5.6/gcc_64/include/QtWidgets/qabstractitemview.h \
 		/opt/Qt5.6.0/5.6/gcc_64/include/QtWidgets/qabstractscrollarea.h \
-		/opt/Qt5.6.0/5.6/gcc_64/include/QtWidgets/qframe.h \
 		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qabstractitemmodel.h \
 		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qitemselectionmodel.h \
 		/opt/Qt5.6.0/5.6/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
@@ -916,6 +921,14 @@ mainwindow.o: ../VirtualShutterClient/mainwindow.cpp ../VirtualShutterClient/mai
 		/opt/Qt5.6.0/5.6/gcc_64/include/QtWidgets/qstyle.h \
 		/opt/Qt5.6.0/5.6/gcc_64/include/QtWidgets/qtabbar.h \
 		/opt/Qt5.6.0/5.6/gcc_64/include/QtWidgets/qrubberband.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtWidgets/QLabel \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtWidgets/qlabel.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtWidgets/QLineEdit \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtWidgets/qlineedit.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtGui/qtextcursor.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtGui/qtextformat.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt5.6.0/5.6/gcc_64/include/QtWidgets/QListView \
 		/opt/Qt5.6.0/5.6/gcc_64/include/QtWidgets/qlistview.h \
 		/opt/Qt5.6.0/5.6/gcc_64/include/QtWidgets/QMenuBar \
