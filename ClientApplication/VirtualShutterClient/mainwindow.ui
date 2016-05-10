@@ -45,7 +45,7 @@
     <property name="styleSheet">
      <string notr="true">background-color: rgb(221, 220, 220);</string>
     </property>
-    <widget class="QPushButton" name="pushButton">
+    <widget class="QPushButton" name="addServerButton">
      <property name="geometry">
       <rect>
        <x>22</x>
@@ -86,7 +86,7 @@ border-color: rgba(255, 255, 255, 0);</string>
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_2">
+    <widget class="QPushButton" name="removeServerButton">
      <property name="geometry">
       <rect>
        <x>22</x>
@@ -115,7 +115,7 @@ border-color: rgba(255, 255, 255, 0);</string>
       </size>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_3">
+    <widget class="QPushButton" name="editServerButton">
      <property name="geometry">
       <rect>
        <x>22</x>
@@ -144,7 +144,7 @@ border-color: rgba(255, 255, 255, 0);</string>
       </size>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_4">
+    <widget class="QPushButton" name="connectToServerButton">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -216,17 +216,17 @@ font: 75 13pt &quot;Cantarell&quot;;</string>
      </property>
     </widget>
    </widget>
-   <widget class="QListView" name="listView">
+   <widget class="QListWidget" name="serverListWidget">
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>99</y>
+      <y>109</y>
       <width>540</width>
-      <height>331</height>
+      <height>321</height>
      </rect>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit">
+   <widget class="QLineEdit" name="nicknameLineEdit">
     <property name="geometry">
      <rect>
       <x>295</x>
@@ -272,11 +272,11 @@ border-top-color: rgb(255, 255, 255);</string>
      <enum>Qt::Horizontal</enum>
     </property>
    </widget>
-   <zorder>listView</zorder>
+   <zorder>serverListWidget</zorder>
    <zorder>widget</zorder>
    <zorder>widget_2</zorder>
    <zorder>widget_3</zorder>
-   <zorder>lineEdit</zorder>
+   <zorder>nicknameLineEdit</zorder>
    <zorder>line</zorder>
   </widget>
   <widget class="QMenuBar" name="menuBar">
@@ -285,7 +285,7 @@ border-top-color: rgb(255, 255, 255);</string>
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>26</height>
+     <height>21</height>
     </rect>
    </property>
    <property name="styleSheet">

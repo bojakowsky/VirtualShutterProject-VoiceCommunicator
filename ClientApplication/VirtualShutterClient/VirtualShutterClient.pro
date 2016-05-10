@@ -5,6 +5,7 @@
 #-------------------------------------------------
 
 QT       += core gui
+QT       += network
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -13,11 +14,16 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp \
+    applicationmanager.cpp \
+    MainWindow/addeditserverdialog.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += mainwindow.h \
+    applicationmanager.h \
+    MainWindow/addeditserverdialog.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    MainWindow/addeditserverdialog.ui
 
 DISTFILES += \
     res/header.jpg
