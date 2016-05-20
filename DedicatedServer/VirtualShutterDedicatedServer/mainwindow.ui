@@ -120,6 +120,9 @@ font: 13pt &quot;Cantarell&quot;;</string>
         <height>30</height>
        </rect>
       </property>
+      <property name="frame">
+       <bool>false</bool>
+      </property>
       <property name="alignment">
        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
       </property>
@@ -194,6 +197,9 @@ font: 13pt &quot;Cantarell&quot;;</string>
         <width>280</width>
         <height>30</height>
        </rect>
+      </property>
+      <property name="frame">
+       <bool>false</bool>
       </property>
       <property name="alignment">
        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -270,6 +276,9 @@ font: 13pt &quot;Cantarell&quot;;</string>
         <height>30</height>
        </rect>
       </property>
+      <property name="frame">
+       <bool>false</bool>
+      </property>
       <property name="alignment">
        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
       </property>
@@ -344,6 +353,9 @@ font: 13pt &quot;Cantarell&quot;;</string>
         <width>280</width>
         <height>30</height>
        </rect>
+      </property>
+      <property name="frame">
+       <bool>false</bool>
       </property>
       <property name="alignment">
        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>

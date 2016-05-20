@@ -104,6 +104,7 @@ public:
         lineEdit = new QLineEdit(widget_5);
         lineEdit->setObjectName(QStringLiteral("lineEdit"));
         lineEdit->setGeometry(QRect(190, 0, 280, 30));
+        lineEdit->setFrame(false);
         lineEdit->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         line = new QFrame(widget_5);
         line->setObjectName(QStringLiteral("line"));
@@ -127,6 +128,7 @@ public:
         lineEdit_3 = new QLineEdit(widget_7);
         lineEdit_3->setObjectName(QStringLiteral("lineEdit_3"));
         lineEdit_3->setGeometry(QRect(190, 0, 280, 30));
+        lineEdit_3->setFrame(false);
         lineEdit_3->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         line_3 = new QFrame(widget_7);
         line_3->setObjectName(QStringLiteral("line_3"));
@@ -150,6 +152,7 @@ public:
         lineEdit_4 = new QLineEdit(widget_10);
         lineEdit_4->setObjectName(QStringLiteral("lineEdit_4"));
         lineEdit_4->setGeometry(QRect(190, 0, 280, 30));
+        lineEdit_4->setFrame(false);
         lineEdit_4->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         line_4 = new QFrame(widget_10);
         line_4->setObjectName(QStringLiteral("line_4"));
@@ -173,6 +176,7 @@ public:
         lineEdit_5 = new QLineEdit(widget_12);
         lineEdit_5->setObjectName(QStringLiteral("lineEdit_5"));
         lineEdit_5->setGeometry(QRect(190, 0, 280, 30));
+        lineEdit_5->setFrame(false);
         lineEdit_5->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         line_5 = new QFrame(widget_12);
         line_5->setObjectName(QStringLiteral("line_5"));
