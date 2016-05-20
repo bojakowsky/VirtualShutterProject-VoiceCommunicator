@@ -1,4 +1,5 @@
 #include "mainwindow.h"
+#include "channellist.h"
 #include "applicationmanager.h"
 #include <QApplication>
 
@@ -10,6 +11,9 @@ int main(int argc, char *argv[])
 
     MainWindow w;
     w.show();
+
+    ChannelList q;
+    q.show();
 
 
 

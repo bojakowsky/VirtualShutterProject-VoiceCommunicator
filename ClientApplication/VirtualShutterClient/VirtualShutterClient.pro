@@ -16,17 +16,21 @@ TEMPLATE = app
 SOURCES += main.cpp\
         mainwindow.cpp \
     applicationmanager.cpp \
-    MainWindow/addeditserverdialog.cpp
+    MainWindow/addeditserverdialog.cpp \
+    channellist.cpp
 
 HEADERS  += mainwindow.h \
     applicationmanager.h \
-    MainWindow/addeditserverdialog.h
+    MainWindow/addeditserverdialog.h \
+    channellist.h
 
 FORMS    += mainwindow.ui \
-    MainWindow/addeditserverdialog.ui
+    MainWindow/addeditserverdialog.ui \
+    channellist.ui
 
 DISTFILES += \
     res/header.jpg
 
 RESOURCES += \
-    res.qrc
+    res.qrc \
+    resources.qrc
