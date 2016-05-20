@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/">
+        <file>res/header-long.jpg</file>
+        <file>res/radio-01.png</file>
+        <file>res/radio-02.png</file>
+        <file>res/server-icon-01.png</file>
+        <file>res/server-icon-02.png</file>
+        <file>res/server-icon-03.png</file>
+        <file>res/server-icon-04.png</file>
+        <file>res/server-icon-05.png</file>
+        <file>res/server-icon-06.png</file>
+        <file>res/server-icon-07.png</file>
+        <file>res/server-icon-08.png</file>
+        <file>res/server-icon-09.png</file>
+        <file>res/server-icon-10.png</file>
+    </qresource>
+</RCC>
