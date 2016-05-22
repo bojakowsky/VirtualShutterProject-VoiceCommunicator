@@ -13,5 +13,10 @@
         <file>res/server-icon-08.png</file>
         <file>res/server-icon-09.png</file>
         <file>res/server-icon-10.png</file>
+        <file>res/switch-off.png</file>
+        <file>res/switch-on.png</file>
+        <file>res/icon-01.png</file>
+        <file>res/icon-02.png</file>
+        <file>res/icon-03.png</file>
     </qresource>
 </RCC>

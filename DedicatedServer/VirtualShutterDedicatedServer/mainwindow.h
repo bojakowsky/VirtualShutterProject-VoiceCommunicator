@@ -15,6 +15,14 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
+private slots:
+    void handleSwitch();
+    void showGeneralConfig();
+    void showUsersConfig();
+    void showChannelsConfig();
+    void showEventsConfig();
+    void showActivitiesConfig();
+    void hideAll();
 private:
     Ui::MainWindow *ui;
 };
