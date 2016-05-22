@@ -17,20 +17,22 @@ SOURCES += main.cpp\
         mainwindow.cpp \
     applicationmanager.cpp \
     MainWindow/addeditserverdialog.cpp \
-    channellist.cpp
+    channellist.cpp \
+    conversation.cpp
 
 HEADERS  += mainwindow.h \
     applicationmanager.h \
     MainWindow/addeditserverdialog.h \
-    channellist.h
+    channellist.h \
+    conversation.h
 
 FORMS    += mainwindow.ui \
     MainWindow/addeditserverdialog.ui \
-    channellist.ui
+    channellist.ui \
+    conversation.ui
 
 DISTFILES += \
     res/header.jpg
 
 RESOURCES += \
-    res.qrc \
-    resources.qrc
+    res.qrc
