@@ -13,11 +13,14 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp \
+    addchanneldialog.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += mainwindow.h \
+    addchanneldialog.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    addchanneldialog.ui
 
 RESOURCES += \
     resources.qrc

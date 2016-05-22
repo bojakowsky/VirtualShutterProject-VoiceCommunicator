@@ -752,7 +752,7 @@ color: rgb(255, 255, 255);</string>
       <enum>QFrame::Plain</enum>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_9">
+    <widget class="QPushButton" name="addChannelBtn">
      <property name="geometry">
       <rect>
        <x>20</x>
@@ -956,10 +956,10 @@ color: rgb(255, 255, 255);</string>
    <zorder>widget_2</zorder>
    <zorder>widget_4</zorder>
    <zorder>usersWidget</zorder>
-   <zorder>generalWidget</zorder>
-   <zorder>channelsWidget</zorder>
    <zorder>activitiesWidget</zorder>
    <zorder>eventsWidget</zorder>
+   <zorder>generalWidget</zorder>
+   <zorder>channelsWidget</zorder>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">

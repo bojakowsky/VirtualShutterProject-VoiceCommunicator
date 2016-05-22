@@ -23,6 +23,7 @@ private slots:
     void showEventsConfig();
     void showActivitiesConfig();
     void hideAll();
+    void addChannelShowDialog();
 private:
     Ui::MainWindow *ui;
 };

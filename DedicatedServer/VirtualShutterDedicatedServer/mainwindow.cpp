@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "addchanneldialog.h"
 #include <QCoreApplication>
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -13,12 +14,15 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->showGeneralConfigBtn, SIGNAL(released()), this, SLOT(showGeneralConfig()));
     connect(ui->showActivitiesConfigBtn, SIGNAL(released()), this, SLOT(showActivitiesConfig()));
     connect(ui->showEventsConfigBtn, SIGNAL(released()), this, SLOT(showEventsConfig()));
+    connect(ui->addChannelBtn, SIGNAL(released()), this, SLOT(addChannelShowDialog()));
 
     ui->usersWidget->hide();
     ui->channelsWidget->hide();
     ui->eventsWidget->hide();
     ui->activitiesWidget->hide();
 }
+
+
 
 void setAsActive(QPushButton *btn, QIcon whiteicon, QWidget *widget){
   //'background-color: rgb(130, 131, 131);\ncolor: rgb(255, 255, 255);\nfont: 12pt "Cantarell";'
@@ -83,6 +87,11 @@ void MainWindow::showUsersConfig()
 void MainWindow::handleSwitch()
 {
     ui->serverRunBtn->setIcon(QIcon(":/res/switch-off.png"));
+}
+
+void MainWindow::addChannelShowDialog()
+{
+
 }
 
 
