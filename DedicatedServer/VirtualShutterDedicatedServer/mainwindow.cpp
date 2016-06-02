@@ -1,11 +1,14 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include "addchanneldialog.h"
+#include "logic/fieldvalidator.h"
 #include <QCoreApplication>
+#include <regex>
 
-MainWindow::MainWindow(QWidget *parent) :
+
+MainWindow::MainWindow(QWidget *parent, ServerManager *serverManager) :
     QMainWindow(parent),
-    ui(new Ui::MainWindow)
+    ui(new Ui::MainWindow),
+    manager(serverManager)
 {
     ui->setupUi(this);
     connect(ui->serverRunBtn, SIGNAL(released()), this, SLOT(handleSwitch()));
@@ -20,7 +23,15 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->channelsWidget->hide();
     ui->eventsWidget->hide();
     ui->activitiesWidget->hide();
+
+    //channelListViewModel = new QStringListModel(this);
+    //ui->channelsList->setModel(channelListViewModel);
+    //connect(ui->channelsList, SIGNAL(doubleClicked(const QModelIndex&)), this, SLOT(doNothing(const QModelIndex&)));
 }
+
+//void doNothing(const QModelIndex &){
+//    qDebug("CLICKED");
+//}
 
 
 
@@ -84,14 +95,127 @@ void MainWindow::showUsersConfig()
     setAsActive(ui->showUsersConfigBtn, QIcon(":/res/server-icon-07.png"), ui->usersWidget);
 }
 
+
+
 void MainWindow::handleSwitch()
 {
-    ui->serverRunBtn->setIcon(QIcon(":/res/switch-off.png"));
+    if (manager->getIsRunning()){
+        ui->serverRunBtn->setIcon(QIcon(":/res/switch-off.png"));
+        manager->Stop();
+
+    }
+    else {
+        try{
+            FieldValidator validator;
+            std::string serverName = validator.stringIsEmptyChecker("Server name", ui->serverNameEdit->text().toStdString());
+
+            QString addressStr = ui->ipEdit->text();
+            QHostAddress address = validator.ipChecker(addressStr);
+
+            std::string portStr = ui->portEdit->text().toStdString();
+            int port = validator.intFieldChecker("Port", portStr, 2, 65535);
+
+            std::string limitStr = ui->limitEdit->text().toStdString();
+            int limit = validator.intFieldChecker("Users limit", limitStr, 2, 32);
+
+            std::string password = ui->passwordEdit->text().toStdString();
+
+            manager->Configure(address, port, serverName, password, limit);
+            manager->Run();
+            ui->serverRunBtn->setIcon(QIcon(":/res/switch-on.png"));
+        }
+        catch(const std::exception& ex){
+            if (this->error == NULL)
+                this->error = new InformDialog(ex.what(), this);
+            else {
+                delete this->error;
+                this->error = new InformDialog(ex.what(), this);
+            }
+            error->show();
+        }
+        catch(...){
+            qDebug("Something went really bad.");
+            throw;
+        }
+    }
 }
 
+void MainWindow::OpenSingleChannelDialog(Channel *ch){
+    if (this->channelDialog == NULL)
+        this->channelDialog = new ChannelDialog(this, ch);
+    else {
+        delete this->channelDialog;
+        this->channelDialog = new ChannelDialog(this, ch);
+    }
+    channelDialog->show();
+}
+
+void MainWindow::OpenSingleChannelDialog(){
+    if (this->channelDialog == NULL)
+        this->channelDialog = new ChannelDialog(this);
+    else {
+        delete this->channelDialog;
+        this->channelDialog = new ChannelDialog(this);
+    }
+    channelDialog->show();
+}
 void MainWindow::addChannelShowDialog()
 {
+    this->OpenSingleChannelDialog();
+    if(channelDialog->exec())
+    {
+        Channel ch = channelDialog->getDialogResult();
+        manager->getChannelsManager()->Add(ch);
 
+        //channelListViewModel->insertRow(channelListViewModel->rowCount());
+        //QModelIndex index = channelListViewModel->index(channelListViewModel->rowCount()-1);
+
+        //For reference
+        //std::string str;
+        //const char * c = str.c_str();
+        std::string data = std::string(ch.getName()) + ", " + std::string(std::to_string(ch.getNumberOfUsersAllowed()));
+        //channelListViewModel->setData(index, data.c_str());
+        ui->channelsList->addItem(data.c_str());
+
+    }
+}
+
+void MainWindow::on_editChannelBtn_clicked()
+{
+    QModelIndexList indexes = ui->channelsList->selectionModel()->selectedIndexes();
+    if (indexes.length() == 1){
+        QModelIndex index = indexes.first();
+        //qDebug(std::to_string(index.row()).c_str());
+        Channel ch = manager->getChannelsManager()->Get(index.row());
+        this->OpenSingleChannelDialog(&ch);
+        if(channelDialog->exec())
+        {
+            Channel ch = channelDialog->getDialogResult();
+            manager->getChannelsManager()->Update(index.row(), ch);
+            std::string data = std::string(ch.getName()) + ", " + std::string(std::to_string(ch.getNumberOfUsersAllowed()));
+            QListWidgetItem *item = ui->channelsList->item(index.row());
+            item->setText(data.c_str());
+        }
+    }
+
+}
+
+void MainWindow::on_removeChannelBtn_clicked()
+{
+    QModelIndexList indexes = ui->channelsList->selectionModel()->selectedIndexes();
+    if (indexes.length() == 1){
+        QModelIndex index = indexes.first();
+        manager->getChannelsManager()->Remove(index.row());
+        qDeleteAll(ui->channelsList->selectedItems());
+        //QListWidgetItem *item = ui->channelsList->item(index.row());
+        //ui->channelsList->removeItemWidget(item);
+    }
+
+}
+
+void MainWindow::setManager(ServerManager *value)
+{
+    manager = value;
 }
 
 
@@ -99,3 +223,5 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
+
+

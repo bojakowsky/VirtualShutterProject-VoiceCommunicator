@@ -111,7 +111,7 @@ font: 13pt &quot;Cantarell&quot;;</string>
        </property>
       </widget>
      </widget>
-     <widget class="QLineEdit" name="lineEdit">
+     <widget class="QLineEdit" name="serverNameEdit">
       <property name="geometry">
        <rect>
         <x>190</x>
@@ -189,7 +189,7 @@ font: 13pt &quot;Cantarell&quot;;</string>
        </property>
       </widget>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_3">
+     <widget class="QLineEdit" name="ipEdit">
       <property name="geometry">
        <rect>
         <x>190</x>
@@ -267,7 +267,7 @@ font: 13pt &quot;Cantarell&quot;;</string>
        </property>
       </widget>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_4">
+     <widget class="QLineEdit" name="portEdit">
       <property name="geometry">
        <rect>
         <x>190</x>
@@ -345,7 +345,7 @@ font: 13pt &quot;Cantarell&quot;;</string>
        </property>
       </widget>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_5">
+     <widget class="QLineEdit" name="limitEdit">
       <property name="geometry">
        <rect>
         <x>190</x>
@@ -398,7 +398,7 @@ font: 13pt &quot;Cantarell&quot;;</string>
      </property>
      <property name="icon">
       <iconset resource="resources.qrc">
-       <normaloff>:/res/switch-on.png</normaloff>:/res/switch-on.png</iconset>
+       <normaloff>:/res/switch-off.png</normaloff>:/res/switch-off.png</iconset>
      </property>
      <property name="iconSize">
       <size>
@@ -452,7 +452,7 @@ font: 13pt &quot;Cantarell&quot;;</string>
        </property>
       </widget>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_6">
+     <widget class="QLineEdit" name="passwordEdit">
       <property name="geometry">
        <rect>
         <x>190</x>
@@ -733,7 +733,10 @@ color: rgb(255, 255, 255);</string>
     <property name="styleSheet">
      <string notr="true">background-color: rgb(221, 220, 220);</string>
     </property>
-    <widget class="QListView" name="channelsList">
+    <widget class="QListWidget" name="channelsList">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>20</x>
@@ -779,7 +782,7 @@ color: rgb(255, 255, 255);</string>
       </size>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_10">
+    <widget class="QPushButton" name="editChannelBtn">
      <property name="geometry">
       <rect>
        <x>185</x>
@@ -806,7 +809,7 @@ color: rgb(255, 255, 255);</string>
       </size>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_11">
+    <widget class="QPushButton" name="removeChannelBtn">
      <property name="geometry">
       <rect>
        <x>350</x>
@@ -967,7 +970,7 @@ color: rgb(255, 255, 255);</string>
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>26</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>
