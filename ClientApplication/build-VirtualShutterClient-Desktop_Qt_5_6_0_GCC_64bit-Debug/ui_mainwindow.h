@@ -17,7 +17,7 @@
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
-#include <QtWidgets/QListView>
+#include <QtWidgets/QListWidget>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
@@ -33,14 +33,14 @@ public:
     QWidget *centralWidget;
     QWidget *widget;
     QWidget *widget_2;
-    QPushButton *pushButton;
-    QPushButton *pushButton_2;
-    QPushButton *pushButton_3;
-    QPushButton *pushButton_4;
+    QPushButton *addServerButton;
+    QPushButton *removeServerButton;
+    QPushButton *editServerButton;
+    QPushButton *connectToServerButton;
     QWidget *widget_3;
     QLabel *label;
-    QListView *listView;
-    QLineEdit *lineEdit;
+    QListWidget *serverListWidget;
+    QLineEdit *nicknameLineEdit;
     QFrame *line;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
@@ -66,56 +66,56 @@ public:
         widget_2->setObjectName(QStringLiteral("widget_2"));
         widget_2->setGeometry(QRect(540, 0, 260, 430));
         widget_2->setStyleSheet(QStringLiteral("background-color: rgb(221, 220, 220);"));
-        pushButton = new QPushButton(widget_2);
-        pushButton->setObjectName(QStringLiteral("pushButton"));
-        pushButton->setGeometry(QRect(22, 20, 215, 40));
-        pushButton->setCursor(QCursor(Qt::PointingHandCursor));
-        pushButton->setStyleSheet(QLatin1String("background-color: rgb(0, 157, 135);\n"
+        addServerButton = new QPushButton(widget_2);
+        addServerButton->setObjectName(QStringLiteral("addServerButton"));
+        addServerButton->setGeometry(QRect(22, 20, 215, 40));
+        addServerButton->setCursor(QCursor(Qt::PointingHandCursor));
+        addServerButton->setStyleSheet(QLatin1String("background-color: rgb(0, 157, 135);\n"
 "selection-background-color: rgb(0, 156, 134);\n"
 "color: rgb(255, 255, 255);\n"
 "border-color: rgba(255, 255, 255, 0);"));
         QIcon icon;
         icon.addFile(QStringLiteral(":/res/icon-03.png"), QSize(), QIcon::Normal, QIcon::Off);
-        pushButton->setIcon(icon);
-        pushButton->setIconSize(QSize(18, 18));
-        pushButton->setAutoDefault(false);
-        pushButton->setFlat(false);
-        pushButton_2 = new QPushButton(widget_2);
-        pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
-        pushButton_2->setGeometry(QRect(22, 70, 215, 40));
-        pushButton_2->setStyleSheet(QLatin1String("background-color: rgb(214, 83, 81);\n"
+        addServerButton->setIcon(icon);
+        addServerButton->setIconSize(QSize(18, 18));
+        addServerButton->setAutoDefault(false);
+        addServerButton->setFlat(false);
+        removeServerButton = new QPushButton(widget_2);
+        removeServerButton->setObjectName(QStringLiteral("removeServerButton"));
+        removeServerButton->setGeometry(QRect(22, 70, 215, 40));
+        removeServerButton->setStyleSheet(QLatin1String("background-color: rgb(214, 83, 81);\n"
 "selection-background-color: rgb(0, 156, 134);\n"
 "color: rgb(255, 255, 255);\n"
 "border-color: rgba(255, 255, 255, 0);"));
         QIcon icon1;
         icon1.addFile(QStringLiteral(":/res/icon-02.png"), QSize(), QIcon::Normal, QIcon::Off);
-        pushButton_2->setIcon(icon1);
-        pushButton_2->setIconSize(QSize(18, 18));
-        pushButton_3 = new QPushButton(widget_2);
-        pushButton_3->setObjectName(QStringLiteral("pushButton_3"));
-        pushButton_3->setGeometry(QRect(22, 120, 215, 40));
-        pushButton_3->setStyleSheet(QLatin1String("background-color: rgb(130, 131, 131);\n"
+        removeServerButton->setIcon(icon1);
+        removeServerButton->setIconSize(QSize(18, 18));
+        editServerButton = new QPushButton(widget_2);
+        editServerButton->setObjectName(QStringLiteral("editServerButton"));
+        editServerButton->setGeometry(QRect(22, 120, 215, 40));
+        editServerButton->setStyleSheet(QLatin1String("background-color: rgb(130, 131, 131);\n"
 "selection-background-color: rgb(0, 156, 134);\n"
 "color: rgb(255, 255, 255);\n"
 "border-color: rgba(255, 255, 255, 0);"));
         QIcon icon2;
         icon2.addFile(QStringLiteral(":/res/icon-01.png"), QSize(), QIcon::Normal, QIcon::Off);
-        pushButton_3->setIcon(icon2);
-        pushButton_3->setIconSize(QSize(18, 18));
-        pushButton_4 = new QPushButton(widget_2);
-        pushButton_4->setObjectName(QStringLiteral("pushButton_4"));
-        pushButton_4->setGeometry(QRect(0, 390, 260, 40));
-        pushButton_4->setFocusPolicy(Qt::NoFocus);
-        pushButton_4->setStyleSheet(QLatin1String("background-color: rgb(0, 157, 135);\n"
+        editServerButton->setIcon(icon2);
+        editServerButton->setIconSize(QSize(18, 18));
+        connectToServerButton = new QPushButton(widget_2);
+        connectToServerButton->setObjectName(QStringLiteral("connectToServerButton"));
+        connectToServerButton->setGeometry(QRect(0, 390, 260, 40));
+        connectToServerButton->setFocusPolicy(Qt::NoFocus);
+        connectToServerButton->setStyleSheet(QLatin1String("background-color: rgb(0, 157, 135);\n"
 "selection-background-color: rgb(0, 156, 134);\n"
 "color: rgb(255, 255, 255);\n"
 "border-color: rgba(255, 255, 255, 0);"));
         QIcon icon3;
         icon3.addFile(QStringLiteral(":/images/res/connect-icon.png"), QSize(), QIcon::Normal, QIcon::Off);
-        pushButton_4->setIcon(icon3);
-        pushButton_4->setIconSize(QSize(18, 18));
-        pushButton_4->setAutoExclusive(false);
-        pushButton_4->setFlat(false);
+        connectToServerButton->setIcon(icon3);
+        connectToServerButton->setIconSize(QSize(18, 18));
+        connectToServerButton->setAutoExclusive(false);
+        connectToServerButton->setFlat(false);
         widget_3 = new QWidget(centralWidget);
         widget_3->setObjectName(QStringLiteral("widget_3"));
         widget_3->setGeometry(QRect(0, 65, 540, 41));
@@ -125,35 +125,35 @@ public:
         label->setGeometry(QRect(10, 10, 161, 20));
         label->setStyleSheet(QLatin1String("color: rgb(130, 131, 131);\n"
 "font: 75 13pt \"Cantarell\";"));
-        listView = new QListView(centralWidget);
-        listView->setObjectName(QStringLiteral("listView"));
-        listView->setGeometry(QRect(0, 99, 540, 331));
-        lineEdit = new QLineEdit(centralWidget);
-        lineEdit->setObjectName(QStringLiteral("lineEdit"));
-        lineEdit->setGeometry(QRect(295, 15, 231, 35));
-        lineEdit->setAutoFillBackground(false);
-        lineEdit->setStyleSheet(QLatin1String("background-color: rgb(255, 255, 255);\n"
+        serverListWidget = new QListWidget(centralWidget);
+        serverListWidget->setObjectName(QStringLiteral("serverListWidget"));
+        serverListWidget->setGeometry(QRect(0, 109, 540, 321));
+        nicknameLineEdit = new QLineEdit(centralWidget);
+        nicknameLineEdit->setObjectName(QStringLiteral("nicknameLineEdit"));
+        nicknameLineEdit->setGeometry(QRect(295, 15, 231, 35));
+        nicknameLineEdit->setAutoFillBackground(false);
+        nicknameLineEdit->setStyleSheet(QLatin1String("background-color: rgb(255, 255, 255);\n"
 "color: rgb(130, 131, 131);\n"
 "border-top-color: rgb(255, 255, 255);"));
-        lineEdit->setInputMask(QStringLiteral(""));
-        lineEdit->setText(QStringLiteral(""));
-        lineEdit->setFrame(false);
-        lineEdit->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+        nicknameLineEdit->setInputMask(QStringLiteral(""));
+        nicknameLineEdit->setText(QStringLiteral(""));
+        nicknameLineEdit->setFrame(false);
+        nicknameLineEdit->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         line = new QFrame(centralWidget);
         line->setObjectName(QStringLiteral("line"));
         line->setGeometry(QRect(295, 50, 231, 5));
         line->setFrameShape(QFrame::HLine);
         line->setFrameShadow(QFrame::Sunken);
         MainWindow->setCentralWidget(centralWidget);
-        listView->raise();
+        serverListWidget->raise();
         widget->raise();
         widget_2->raise();
         widget_3->raise();
-        lineEdit->raise();
+        nicknameLineEdit->raise();
         line->raise();
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 800, 26));
+        menuBar->setGeometry(QRect(0, 0, 800, 21));
         menuBar->setStyleSheet(QStringLiteral(""));
         MainWindow->setMenuBar(menuBar);
         mainToolBar = new QToolBar(MainWindow);
@@ -167,8 +167,8 @@ public:
 
         retranslateUi(MainWindow);
 
-        pushButton->setDefault(false);
-        pushButton_4->setDefault(false);
+        addServerButton->setDefault(false);
+        connectToServerButton->setDefault(false);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -177,12 +177,12 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "VirtualShutter", 0));
-        pushButton->setText(QApplication::translate("MainWindow", "ADD", 0));
-        pushButton_2->setText(QApplication::translate("MainWindow", "REMOVE", 0));
-        pushButton_3->setText(QApplication::translate("MainWindow", "EDIT", 0));
-        pushButton_4->setText(QApplication::translate("MainWindow", "CONNECT", 0));
+        addServerButton->setText(QApplication::translate("MainWindow", "ADD", 0));
+        removeServerButton->setText(QApplication::translate("MainWindow", "REMOVE", 0));
+        editServerButton->setText(QApplication::translate("MainWindow", "EDIT", 0));
+        connectToServerButton->setText(QApplication::translate("MainWindow", "CONNECT", 0));
         label->setText(QApplication::translate("MainWindow", "SERVERS LIST", 0));
-        lineEdit->setPlaceholderText(QApplication::translate("MainWindow", "TYPE NICKNAME", 0));
+        nicknameLineEdit->setPlaceholderText(QApplication::translate("MainWindow", "TYPE NICKNAME", 0));
     } // retranslateUi
 
 };

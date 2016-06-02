@@ -23,7 +23,7 @@ void MainWindow::on_addServerButton_clicked()
 
 void MainWindow::on_removeServerButton_clicked()
 {
-    ui->serverListWidget->addItem("lo");
+  //  ui->serverListWidget->addItem("lo");
 }
 
 void MainWindow::on_editServerButton_clicked()
