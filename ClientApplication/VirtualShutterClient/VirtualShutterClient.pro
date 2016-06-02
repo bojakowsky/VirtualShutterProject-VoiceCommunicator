@@ -18,13 +18,15 @@ SOURCES += main.cpp\
     applicationmanager.cpp \
     MainWindow/addeditserverdialog.cpp \
     channellist.cpp \
-    conversation.cpp
+    conversation.cpp \
+    serveritem.cpp
 
 HEADERS  += mainwindow.h \
     applicationmanager.h \
     MainWindow/addeditserverdialog.h \
     channellist.h \
-    conversation.h
+    conversation.h \
+    serveritem.h
 
 FORMS    += mainwindow.ui \
     MainWindow/addeditserverdialog.ui \
