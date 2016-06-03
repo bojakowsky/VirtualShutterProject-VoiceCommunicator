@@ -16,8 +16,8 @@ int main(int argc, char *argv[])
 
     QApplication a(argc, argv);
     ApplicationManager *applicationManager = new ApplicationManager;
-    TCPClient *Client = new TCPClient();
-    Client->Connect();
+    //TCPClient *Client = new TCPClient();
+    //Client->Connect();
     MainWindow w;
     w.show();
 
@@ -27,8 +27,8 @@ int main(int argc, char *argv[])
     //Conversation e;
     //e.show();
 
-    new UDPPlayer();
-    new UdpSender();
+    //new UDPPlayer();
+    //new UdpSender();
 
     return a.exec();
 }

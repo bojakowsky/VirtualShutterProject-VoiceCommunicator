@@ -1,0 +1,65 @@
+#include "serveritem.h"
+
+ServerItem::ServerItem()
+{
+
+}
+
+
+
+<<<<<<< HEAD
+ServerItem::ServerItem(std::string name, QHostAddress ip, int port)
+{
+    this->setName(name);
+    this->setIp(ip);
+    this->setPort(port);
+=======
+ServerItem::ServerItem(std::string name, int octet1, int octet2, int octet3, int octet4, int port)
+{
+    this->setName(name);
+    this->setOctet(octet1, 1);
+    this->setNumberOfUsersAllowed(numberOfUsersAllowed);
+>>>>>>> e2e35c02f223b3032ffa155b15af6f16d3f0b7cb
+}
+
+std::string ServerItem::getName() const
+{
+    return name;
+}
+
+void ServerItem::setName(const std::string &value)
+{
+    name = value;
+}
+
+<<<<<<< HEAD
+int ServerItem::getIp(){
+    return ip;
+}
+
+void ServerItem::setIp(QHostAddress ip){
+    this->ip=ip;
+}
+
+=======
+QHostAddress ServerItem::getIp() const
+{
+    return ip;
+}
+
+void ServerItem::setIp(const QHostAddress &value)
+{
+    ip = value;
+}
+
+
+>>>>>>> e2e35c02f223b3032ffa155b15af6f16d3f0b7cb
+int ServerItem::getPort() const
+{
+    return port;
+}
+
+void ServerItem::setPort(int port)
+{
+    this.port = port;
+}

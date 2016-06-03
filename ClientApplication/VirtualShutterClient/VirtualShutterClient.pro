@@ -6,6 +6,7 @@
 
 QT       += core gui
 QT       += network
+QT       += multimedia
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -19,14 +20,20 @@ SOURCES += main.cpp\
     MainWindow/addeditserverdialog.cpp \
     channellist.cpp \
     conversation.cpp \
-    serveritem.cpp
+    serveritem.cpp \
+    tcpclient.cpp \
+    udpplayer.cpp \
+    udpsender.cpp
 
 HEADERS  += mainwindow.h \
     applicationmanager.h \
     MainWindow/addeditserverdialog.h \
     channellist.h \
     conversation.h \
-    serveritem.h
+    serveritem.h \
+    tcpclient.h \
+    udpplayer.h \
+    udpsender.h
 
 FORMS    += mainwindow.ui \
     MainWindow/addeditserverdialog.ui \

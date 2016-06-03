@@ -8,7 +8,6 @@ AddEditServerDialog::AddEditServerDialog(QWidget *parent) :
     ui(new Ui::AddEditServerDialog)
 {
     ui->setupUi(this);
-   // MainWindow.ui->serverListWidget->addItem("qwe");
 }
 
 AddEditServerDialog::~AddEditServerDialog()
