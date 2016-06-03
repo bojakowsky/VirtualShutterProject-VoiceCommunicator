@@ -2,10 +2,12 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QTimer>
 #include "logic/manager/servermanager.h"
 #include "channeldialog.h"
 #include "informdialog.h"
 #include <QStringListModel>
+
 namespace Ui {
 class MainWindow;
 }
@@ -23,6 +25,7 @@ public:
     void OpenSingleChannelDialog();
 
 private slots:
+    void updateUserList();
     void handleSwitch();
     void showGeneralConfig();
     void showUsersConfig();
@@ -35,6 +38,14 @@ private slots:
     void on_editChannelBtn_clicked();
 
     void on_removeChannelBtn_clicked();
+
+    void on_kickButton_clicked();
+
+    void on_blockButton_clicked();
+
+    void on_unbanButton_clicked();
+
+    void on_moveButton_clicked();
 
 private:
     Ui::MainWindow *ui;

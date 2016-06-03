@@ -215,6 +215,7 @@ Makefile: ..\VirtualShutterDedicatedServer\VirtualShutterDedicatedServer.pro D:\
 		D:\Qt\5.6\msvc2015_64\mkspecs\features\lex.prf \
 		..\VirtualShutterDedicatedServer\VirtualShutterDedicatedServer.pro \
 		D:\Qt\5.6\msvc2015_64\lib\qtmaind.prl \
+		D:\Qt\5.6\msvc2015_64\lib\Qt5Multimedia.prl \
 		D:\Qt\5.6\msvc2015_64\lib\Qt5Widgets.prl \
 		D:\Qt\5.6\msvc2015_64\lib\Qt5Gui.prl \
 		D:\Qt\5.6\msvc2015_64\lib\Qt5Network.prl \
@@ -362,6 +363,7 @@ D:\Qt\5.6\msvc2015_64\mkspecs\features\yacc.prf:
 D:\Qt\5.6\msvc2015_64\mkspecs\features\lex.prf:
 ..\VirtualShutterDedicatedServer\VirtualShutterDedicatedServer.pro:
 D:\Qt\5.6\msvc2015_64\lib\qtmaind.prl:
+D:\Qt\5.6\msvc2015_64\lib\Qt5Multimedia.prl:
 D:\Qt\5.6\msvc2015_64\lib\Qt5Widgets.prl:
 D:\Qt\5.6\msvc2015_64\lib\Qt5Gui.prl:
 D:\Qt\5.6\msvc2015_64\lib\Qt5Network.prl:

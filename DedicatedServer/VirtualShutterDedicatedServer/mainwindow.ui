@@ -650,7 +650,7 @@ font: 12pt &quot;Cantarell&quot;;</string>
     <property name="styleSheet">
      <string notr="true">background-color: rgb(221, 220, 220);</string>
     </property>
-    <widget class="QListView" name="usersList">
+    <widget class="QListWidget" name="usersList">
      <property name="geometry">
       <rect>
        <x>20</x>
@@ -669,12 +669,15 @@ font: 12pt &quot;Cantarell&quot;;</string>
       <enum>QFrame::Plain</enum>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_6">
+    <widget class="QPushButton" name="kickButton">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>20</x>
        <y>380</y>
-       <width>150</width>
+       <width>111</width>
        <height>40</height>
       </rect>
      </property>
@@ -686,12 +689,12 @@ color: rgb(255, 255, 255);</string>
       <string>Kick</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_7">
+    <widget class="QPushButton" name="blockButton">
      <property name="geometry">
       <rect>
-       <x>185</x>
+       <x>140</x>
        <y>380</y>
-       <width>150</width>
+       <width>111</width>
        <height>40</height>
       </rect>
      </property>
@@ -700,15 +703,15 @@ color: rgb(255, 255, 255);</string>
 color: rgb(255, 255, 255);</string>
      </property>
      <property name="text">
-      <string>Block</string>
+      <string>Ban</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_8">
+    <widget class="QPushButton" name="moveButton">
      <property name="geometry">
       <rect>
-       <x>350</x>
+       <x>380</x>
        <y>380</y>
-       <width>150</width>
+       <width>111</width>
        <height>40</height>
       </rect>
      </property>
@@ -717,7 +720,24 @@ color: rgb(255, 255, 255);</string>
 color: rgb(255, 255, 255);</string>
      </property>
      <property name="text">
-      <string>Channel</string>
+      <string>Move</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="unbanButton">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>380</y>
+       <width>111</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(130, 131, 131);
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>Unban</string>
      </property>
     </widget>
    </widget>
@@ -958,11 +978,11 @@ color: rgb(255, 255, 255);</string>
    <zorder>widget</zorder>
    <zorder>widget_2</zorder>
    <zorder>widget_4</zorder>
-   <zorder>usersWidget</zorder>
    <zorder>activitiesWidget</zorder>
    <zorder>eventsWidget</zorder>
    <zorder>generalWidget</zorder>
    <zorder>channelsWidget</zorder>
+   <zorder>usersWidget</zorder>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">

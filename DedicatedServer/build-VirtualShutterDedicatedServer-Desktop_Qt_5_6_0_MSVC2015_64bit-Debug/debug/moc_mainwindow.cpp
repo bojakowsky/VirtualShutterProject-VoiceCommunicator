@@ -19,8 +19,8 @@
 
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_MainWindow_t {
-    QByteArrayData data[12];
-    char stringdata0[199];
+    QByteArrayData data[17];
+    char stringdata0[304];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -30,25 +30,32 @@ struct qt_meta_stringdata_MainWindow_t {
 static const qt_meta_stringdata_MainWindow_t qt_meta_stringdata_MainWindow = {
     {
 QT_MOC_LITERAL(0, 0, 10), // "MainWindow"
-QT_MOC_LITERAL(1, 11, 12), // "handleSwitch"
-QT_MOC_LITERAL(2, 24, 0), // ""
-QT_MOC_LITERAL(3, 25, 17), // "showGeneralConfig"
-QT_MOC_LITERAL(4, 43, 15), // "showUsersConfig"
-QT_MOC_LITERAL(5, 59, 18), // "showChannelsConfig"
-QT_MOC_LITERAL(6, 78, 16), // "showEventsConfig"
-QT_MOC_LITERAL(7, 95, 20), // "showActivitiesConfig"
-QT_MOC_LITERAL(8, 116, 7), // "hideAll"
-QT_MOC_LITERAL(9, 124, 20), // "addChannelShowDialog"
-QT_MOC_LITERAL(10, 145, 25), // "on_editChannelBtn_clicked"
-QT_MOC_LITERAL(11, 171, 27) // "on_removeChannelBtn_clicked"
+QT_MOC_LITERAL(1, 11, 14), // "updateUserList"
+QT_MOC_LITERAL(2, 26, 0), // ""
+QT_MOC_LITERAL(3, 27, 12), // "handleSwitch"
+QT_MOC_LITERAL(4, 40, 17), // "showGeneralConfig"
+QT_MOC_LITERAL(5, 58, 15), // "showUsersConfig"
+QT_MOC_LITERAL(6, 74, 18), // "showChannelsConfig"
+QT_MOC_LITERAL(7, 93, 16), // "showEventsConfig"
+QT_MOC_LITERAL(8, 110, 20), // "showActivitiesConfig"
+QT_MOC_LITERAL(9, 131, 7), // "hideAll"
+QT_MOC_LITERAL(10, 139, 20), // "addChannelShowDialog"
+QT_MOC_LITERAL(11, 160, 25), // "on_editChannelBtn_clicked"
+QT_MOC_LITERAL(12, 186, 27), // "on_removeChannelBtn_clicked"
+QT_MOC_LITERAL(13, 214, 21), // "on_kickButton_clicked"
+QT_MOC_LITERAL(14, 236, 22), // "on_blockButton_clicked"
+QT_MOC_LITERAL(15, 259, 22), // "on_unbanButton_clicked"
+QT_MOC_LITERAL(16, 282, 21) // "on_moveButton_clicked"
 
     },
-    "MainWindow\0handleSwitch\0\0showGeneralConfig\0"
-    "showUsersConfig\0showChannelsConfig\0"
-    "showEventsConfig\0showActivitiesConfig\0"
-    "hideAll\0addChannelShowDialog\0"
-    "on_editChannelBtn_clicked\0"
-    "on_removeChannelBtn_clicked"
+    "MainWindow\0updateUserList\0\0handleSwitch\0"
+    "showGeneralConfig\0showUsersConfig\0"
+    "showChannelsConfig\0showEventsConfig\0"
+    "showActivitiesConfig\0hideAll\0"
+    "addChannelShowDialog\0on_editChannelBtn_clicked\0"
+    "on_removeChannelBtn_clicked\0"
+    "on_kickButton_clicked\0on_blockButton_clicked\0"
+    "on_unbanButton_clicked\0on_moveButton_clicked"
 };
 #undef QT_MOC_LITERAL
 
@@ -58,7 +65,7 @@ static const uint qt_meta_data_MainWindow[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-      10,   14, // methods
+      15,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -66,18 +73,28 @@ static const uint qt_meta_data_MainWindow[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,   64,    2, 0x08 /* Private */,
-       3,    0,   65,    2, 0x08 /* Private */,
-       4,    0,   66,    2, 0x08 /* Private */,
-       5,    0,   67,    2, 0x08 /* Private */,
-       6,    0,   68,    2, 0x08 /* Private */,
-       7,    0,   69,    2, 0x08 /* Private */,
-       8,    0,   70,    2, 0x08 /* Private */,
-       9,    0,   71,    2, 0x08 /* Private */,
-      10,    0,   72,    2, 0x08 /* Private */,
-      11,    0,   73,    2, 0x08 /* Private */,
+       1,    0,   89,    2, 0x08 /* Private */,
+       3,    0,   90,    2, 0x08 /* Private */,
+       4,    0,   91,    2, 0x08 /* Private */,
+       5,    0,   92,    2, 0x08 /* Private */,
+       6,    0,   93,    2, 0x08 /* Private */,
+       7,    0,   94,    2, 0x08 /* Private */,
+       8,    0,   95,    2, 0x08 /* Private */,
+       9,    0,   96,    2, 0x08 /* Private */,
+      10,    0,   97,    2, 0x08 /* Private */,
+      11,    0,   98,    2, 0x08 /* Private */,
+      12,    0,   99,    2, 0x08 /* Private */,
+      13,    0,  100,    2, 0x08 /* Private */,
+      14,    0,  101,    2, 0x08 /* Private */,
+      15,    0,  102,    2, 0x08 /* Private */,
+      16,    0,  103,    2, 0x08 /* Private */,
 
  // slots: parameters
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -98,16 +115,21 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         MainWindow *_t = static_cast<MainWindow *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->handleSwitch(); break;
-        case 1: _t->showGeneralConfig(); break;
-        case 2: _t->showUsersConfig(); break;
-        case 3: _t->showChannelsConfig(); break;
-        case 4: _t->showEventsConfig(); break;
-        case 5: _t->showActivitiesConfig(); break;
-        case 6: _t->hideAll(); break;
-        case 7: _t->addChannelShowDialog(); break;
-        case 8: _t->on_editChannelBtn_clicked(); break;
-        case 9: _t->on_removeChannelBtn_clicked(); break;
+        case 0: _t->updateUserList(); break;
+        case 1: _t->handleSwitch(); break;
+        case 2: _t->showGeneralConfig(); break;
+        case 3: _t->showUsersConfig(); break;
+        case 4: _t->showChannelsConfig(); break;
+        case 5: _t->showEventsConfig(); break;
+        case 6: _t->showActivitiesConfig(); break;
+        case 7: _t->hideAll(); break;
+        case 8: _t->addChannelShowDialog(); break;
+        case 9: _t->on_editChannelBtn_clicked(); break;
+        case 10: _t->on_removeChannelBtn_clicked(); break;
+        case 11: _t->on_kickButton_clicked(); break;
+        case 12: _t->on_blockButton_clicked(); break;
+        case 13: _t->on_unbanButton_clicked(); break;
+        case 14: _t->on_moveButton_clicked(); break;
         default: ;
         }
     }
@@ -139,13 +161,13 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 10)
+        if (_id < 15)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 10;
+        _id -= 15;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 10)
+        if (_id < 15)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 10;
+        _id -= 15;
     }
     return _id;
 }

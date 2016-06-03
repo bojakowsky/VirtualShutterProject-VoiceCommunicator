@@ -7,6 +7,8 @@
 #include "logic/manager/channelsmanager.h"
 #include "logic/manager/usermanager.h"
 #include "logic/manager/connectionmanager.h"
+#include "logic/manager/filemanager.h"
+
 class ServerManager
 {
 public:
@@ -41,6 +43,8 @@ public:
 
     ConnectionManager *getConnectionManager() const;
 
+    FileManager *getFileManager() const;
+
 protected:
 
 private:
@@ -54,6 +58,7 @@ private:
     ChannelsManager *channelsManager;
     UserManager *userManager;
     ConnectionManager *connectionManager;
+    FileManager *fileManager;
 
 };
 

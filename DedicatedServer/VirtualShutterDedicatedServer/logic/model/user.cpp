@@ -52,12 +52,13 @@ void User::setIsBanned(bool value)
     isBanned = value;
 }
 
-int User::getChannelId() const
+std::string User::getChannelName() const
 {
-    return channelId;
+    return channelName;
 }
 
-void User::setChannelId(int value)
+void User::setChannelName(const std::string &value)
 {
-    channelId = value;
+    channelName = value;
 }
+

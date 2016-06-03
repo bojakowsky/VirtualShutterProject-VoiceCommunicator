@@ -21,15 +21,15 @@ public:
     bool getIsBanned() const;
     void setIsBanned(bool value);
 
-    int getChannelId() const;
-    void setChannelId(int value);
+    std::string getChannelName() const;
+    void setChannelName(const std::string &value);
 
 private:
     QHostAddress ip;
     int port;
     std::string userName;
     bool isBanned = false;
-    int channelId;
+    std::string channelName = "Global";
 };
 
 #endif // USER_H

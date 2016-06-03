@@ -69,10 +69,11 @@ public:
     QPushButton *showUsersConfigBtn;
     QPushButton *showChannelsConfigBtn;
     QWidget *usersWidget;
-    QListView *usersList;
-    QPushButton *pushButton_6;
-    QPushButton *pushButton_7;
-    QPushButton *pushButton_8;
+    QListWidget *usersList;
+    QPushButton *kickButton;
+    QPushButton *blockButton;
+    QPushButton *moveButton;
+    QPushButton *unbanButton;
     QWidget *channelsWidget;
     QListWidget *channelsList;
     QPushButton *addChannelBtn;
@@ -295,26 +296,32 @@ public:
         usersWidget->setObjectName(QStringLiteral("usersWidget"));
         usersWidget->setGeometry(QRect(280, 105, 520, 435));
         usersWidget->setStyleSheet(QStringLiteral("background-color: rgb(221, 220, 220);"));
-        usersList = new QListView(usersWidget);
+        usersList = new QListWidget(usersWidget);
         usersList->setObjectName(QStringLiteral("usersList"));
         usersList->setGeometry(QRect(20, 0, 480, 360));
         usersList->setStyleSheet(QStringLiteral("background-color: rgb(255, 255, 255);"));
         usersList->setFrameShape(QFrame::NoFrame);
         usersList->setFrameShadow(QFrame::Plain);
-        pushButton_6 = new QPushButton(usersWidget);
-        pushButton_6->setObjectName(QStringLiteral("pushButton_6"));
-        pushButton_6->setGeometry(QRect(20, 380, 150, 40));
-        pushButton_6->setStyleSheet(QLatin1String("background-color: rgb(130, 131, 131);\n"
+        kickButton = new QPushButton(usersWidget);
+        kickButton->setObjectName(QStringLiteral("kickButton"));
+        kickButton->setEnabled(true);
+        kickButton->setGeometry(QRect(20, 380, 111, 40));
+        kickButton->setStyleSheet(QLatin1String("background-color: rgb(130, 131, 131);\n"
 "color: rgb(255, 255, 255);"));
-        pushButton_7 = new QPushButton(usersWidget);
-        pushButton_7->setObjectName(QStringLiteral("pushButton_7"));
-        pushButton_7->setGeometry(QRect(185, 380, 150, 40));
-        pushButton_7->setStyleSheet(QLatin1String("background-color: rgb(130, 131, 131);\n"
+        blockButton = new QPushButton(usersWidget);
+        blockButton->setObjectName(QStringLiteral("blockButton"));
+        blockButton->setGeometry(QRect(140, 380, 111, 40));
+        blockButton->setStyleSheet(QLatin1String("background-color: rgb(130, 131, 131);\n"
 "color: rgb(255, 255, 255);"));
-        pushButton_8 = new QPushButton(usersWidget);
-        pushButton_8->setObjectName(QStringLiteral("pushButton_8"));
-        pushButton_8->setGeometry(QRect(350, 380, 150, 40));
-        pushButton_8->setStyleSheet(QLatin1String("background-color: rgb(130, 131, 131);\n"
+        moveButton = new QPushButton(usersWidget);
+        moveButton->setObjectName(QStringLiteral("moveButton"));
+        moveButton->setGeometry(QRect(380, 380, 111, 40));
+        moveButton->setStyleSheet(QLatin1String("background-color: rgb(130, 131, 131);\n"
+"color: rgb(255, 255, 255);"));
+        unbanButton = new QPushButton(usersWidget);
+        unbanButton->setObjectName(QStringLiteral("unbanButton"));
+        unbanButton->setGeometry(QRect(260, 380, 111, 40));
+        unbanButton->setStyleSheet(QLatin1String("background-color: rgb(130, 131, 131);\n"
 "color: rgb(255, 255, 255);"));
         channelsWidget = new QWidget(centralWidget);
         channelsWidget->setObjectName(QStringLiteral("channelsWidget"));
@@ -392,11 +399,11 @@ public:
         widget->raise();
         widget_2->raise();
         widget_4->raise();
-        usersWidget->raise();
         activitiesWidget->raise();
         eventsWidget->raise();
         generalWidget->raise();
         channelsWidget->raise();
+        usersWidget->raise();
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
         menuBar->setGeometry(QRect(0, 0, 800, 21));
@@ -428,9 +435,10 @@ public:
         showActivitiesConfigBtn->setText(QApplication::translate("MainWindow", "ACTIVITIES", 0));
         showUsersConfigBtn->setText(QApplication::translate("MainWindow", "USERS", 0));
         showChannelsConfigBtn->setText(QApplication::translate("MainWindow", "CHANNELS", 0));
-        pushButton_6->setText(QApplication::translate("MainWindow", "Kick", 0));
-        pushButton_7->setText(QApplication::translate("MainWindow", "Block", 0));
-        pushButton_8->setText(QApplication::translate("MainWindow", "Channel", 0));
+        kickButton->setText(QApplication::translate("MainWindow", "Kick", 0));
+        blockButton->setText(QApplication::translate("MainWindow", "Ban", 0));
+        moveButton->setText(QApplication::translate("MainWindow", "Move", 0));
+        unbanButton->setText(QApplication::translate("MainWindow", "Unban", 0));
         addChannelBtn->setText(QApplication::translate("MainWindow", "Add", 0));
         editChannelBtn->setText(QApplication::translate("MainWindow", "Edit", 0));
         removeChannelBtn->setText(QApplication::translate("MainWindow", "Remove", 0));

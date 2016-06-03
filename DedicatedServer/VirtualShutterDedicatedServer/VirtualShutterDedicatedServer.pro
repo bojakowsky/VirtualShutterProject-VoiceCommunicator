@@ -6,6 +6,7 @@
 
 QT       += core gui
 QT       += network
+QT       += multimedia
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -25,7 +26,14 @@ SOURCES += main.cpp\
     logic/manager/usermanager.cpp \
     logic/model/channel.cpp \
     logic/model/user.cpp \
-    channeldialog.cpp
+    channeldialog.cpp \
+    logic/connection/clienttask.cpp \
+    logic/connection/tcpclient.cpp \
+    logic/connection/tcpserver.cpp \
+    logic/connection/udpbroadcast.cpp \
+    logic/connection/udpplayer.cpp \
+    logic/helper.cpp \
+    logic/manager/filemanager.cpp
 
 HEADERS  += mainwindow.h \
     informdialog.h \
@@ -38,7 +46,14 @@ HEADERS  += mainwindow.h \
     logic/manager/usermanager.h \
     logic/model/channel.h \
     logic/model/user.h \
-    channeldialog.h
+    channeldialog.h \
+    logic/connection/clienttask.h \
+    logic/connection/tcpclient.h \
+    logic/connection/tcpserver.h \
+    logic/connection/udpbroadcast.h \
+    logic/connection/udpplayer.h \
+    logic/helper.h \
+    logic/manager/filemanager.h
 
 FORMS    += mainwindow.ui \
     informdialog.ui \

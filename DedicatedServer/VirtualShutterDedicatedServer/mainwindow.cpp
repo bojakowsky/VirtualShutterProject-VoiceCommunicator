@@ -27,6 +27,10 @@ MainWindow::MainWindow(QWidget *parent, ServerManager *serverManager) :
     //channelListViewModel = new QStringListModel(this);
     //ui->channelsList->setModel(channelListViewModel);
     //connect(ui->channelsList, SIGNAL(doubleClicked(const QModelIndex&)), this, SLOT(doNothing(const QModelIndex&)));
+
+    QTimer *timer = new QTimer(this);
+    connect(timer, SIGNAL(timeout()), this, SLOT(updateUserList()));
+    timer->start(1000);
 }
 
 //void doNothing(const QModelIndex &){
@@ -159,6 +163,22 @@ void MainWindow::OpenSingleChannelDialog(){
     }
     channelDialog->show();
 }
+
+void MainWindow::updateUserList()
+{
+    int row = ui->usersList->currentRow();
+    ui->usersList->clear();
+    for (int i = 0 ; i < manager->getUserManager()->users.size(); ++i){
+        User user = manager->getUserManager()->users.at(i);
+        std::string data = std::string(user.getUserName()) + "  " +
+            std::string(user.getIp().toString().toStdString()) + ":" +
+            std::to_string(user.getPort()) + "  " +
+            std::to_string(user.getIsBanned());
+        ui->usersList->addItem(data.c_str());
+    }
+    ui->usersList->setCurrentRow(row);
+
+}
 void MainWindow::addChannelShowDialog()
 {
     this->OpenSingleChannelDialog();
@@ -225,3 +245,37 @@ MainWindow::~MainWindow()
 }
 
 
+
+void MainWindow::on_kickButton_clicked()
+{
+    QModelIndexList indexes = ui->usersList->selectionModel()->selectedIndexes();
+    if (indexes.length() == 1){
+        QModelIndex index = indexes.first();
+        manager->getUserManager()->Kick(index.row());
+        qDeleteAll(ui->usersList->selectedItems());
+    }
+}
+
+void MainWindow::on_blockButton_clicked()
+{
+    QModelIndexList indexes = ui->usersList->selectionModel()->selectedIndexes();
+    if (indexes.length() == 1){
+        QModelIndex index = indexes.first();
+        manager->getUserManager()->Ban(index.row());
+        //qDeleteAll(ui->usersList->selectedItems());
+    }
+}
+
+void MainWindow::on_unbanButton_clicked()
+{
+    QModelIndexList indexes = ui->usersList->selectionModel()->selectedIndexes();
+    if (indexes.length() == 1){
+        QModelIndex index = indexes.first();
+        manager->getUserManager()->Unban(index.row());
+    }
+}
+
+void MainWindow::on_moveButton_clicked()
+{
+
+}
