@@ -11,8 +11,8 @@ public:
     std::string getName() const;
     void setName(const std::string &value);
 
-    int getIp() const;
-    void setIp(int ip[]);
+    QHostAddress getIp() const;
+     void setIp(const QHostAddress &value);
 
     int getPort() const;
     void setPort(int value);
