@@ -2,8 +2,13 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include "applicationmanager.h"
+#include "logic/manager/applicationmanager.h"
 #include "MainWindow/addeditserverdialog.h"
+#include <QListWidget>
+#include <string>
+#include <vector>
+#include "conversation.h"
+#include "logic/fieldvalidator.h"
 namespace Ui {
 class MainWindow;
 }
@@ -14,8 +19,12 @@ class MainWindow : public QMainWindow
 
 public:
     explicit MainWindow(QWidget *parent = 0, ApplicationManager *appManager = 0);
-
     ~MainWindow();
+
+    void OpenSingleServerDialog(Server *server);
+    void OpenSingleServerDialog();
+
+    void setManager(ApplicationManager *value);
 
 private slots:
     void on_addServerButton_clicked();
@@ -24,11 +33,17 @@ private slots:
 
     void on_editServerButton_clicked();
 
+    void on_connectToServerButton_clicked();
+
 private:
     Ui::MainWindow *ui;
-    AddEditServerDialog *addEditServerDialog;
+    Conversation *conversation;
 
+    AddEditServerDialog *addEditServerDialog = 0;
+    InformDialog *informDialog = 0;
     ApplicationManager *manager;
+
+    void FillWidgetList(QListWidget *list, std::vector<std::string> data);
 };
 
 #endif // MAINWINDOW_H

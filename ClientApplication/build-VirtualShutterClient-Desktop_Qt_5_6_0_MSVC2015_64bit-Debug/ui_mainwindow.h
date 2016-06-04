@@ -39,7 +39,7 @@ public:
     QPushButton *connectToServerButton;
     QWidget *widget_3;
     QLabel *label;
-    QListWidget *serverListWidget;
+    QListWidget *serverList;
     QLineEdit *nicknameLineEdit;
     QFrame *line;
     QMenuBar *menuBar;
@@ -125,9 +125,9 @@ public:
         label->setGeometry(QRect(10, 10, 161, 20));
         label->setStyleSheet(QLatin1String("color: rgb(130, 131, 131);\n"
 "font: 75 13pt \"Cantarell\";"));
-        serverListWidget = new QListWidget(centralWidget);
-        serverListWidget->setObjectName(QStringLiteral("serverListWidget"));
-        serverListWidget->setGeometry(QRect(0, 109, 540, 321));
+        serverList = new QListWidget(centralWidget);
+        serverList->setObjectName(QStringLiteral("serverList"));
+        serverList->setGeometry(QRect(0, 109, 540, 321));
         nicknameLineEdit = new QLineEdit(centralWidget);
         nicknameLineEdit->setObjectName(QStringLiteral("nicknameLineEdit"));
         nicknameLineEdit->setGeometry(QRect(295, 15, 231, 35));
@@ -145,7 +145,7 @@ public:
         line->setFrameShape(QFrame::HLine);
         line->setFrameShadow(QFrame::Sunken);
         MainWindow->setCentralWidget(centralWidget);
-        serverListWidget->raise();
+        serverList->raise();
         widget->raise();
         widget_2->raise();
         widget_3->raise();

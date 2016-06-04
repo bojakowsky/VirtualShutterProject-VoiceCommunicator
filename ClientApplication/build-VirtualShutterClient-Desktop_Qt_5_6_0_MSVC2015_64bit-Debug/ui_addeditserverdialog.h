@@ -14,11 +14,11 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QDialog>
+#include <QtWidgets/QDialogButtonBox>
 #include <QtWidgets/QFrame>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
-#include <QtWidgets/QPushButton>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -26,7 +26,6 @@ QT_BEGIN_NAMESPACE
 class Ui_AddEditServerDialog
 {
 public:
-    QPushButton *pushButton;
     QWidget *widget_2;
     QLabel *label_4;
     QWidget *widget_3;
@@ -51,20 +50,19 @@ public:
     QWidget *widget_6;
     QLineEdit *portLineEdit;
     QFrame *line_5;
+    QDialogButtonBox *buttonBox;
+    QWidget *widget_8;
+    QLabel *label_9;
+    QWidget *widget_7;
+    QLineEdit *passwordLineEdit;
+    QFrame *line_6;
 
     void setupUi(QDialog *AddEditServerDialog)
     {
         if (AddEditServerDialog->objectName().isEmpty())
             AddEditServerDialog->setObjectName(QStringLiteral("AddEditServerDialog"));
-        AddEditServerDialog->resize(350, 320);
+        AddEditServerDialog->resize(350, 401);
         AddEditServerDialog->setStyleSheet(QStringLiteral("background-color: rgb(255, 255, 255);"));
-        pushButton = new QPushButton(AddEditServerDialog);
-        pushButton->setObjectName(QStringLiteral("pushButton"));
-        pushButton->setGeometry(QRect(260, 270, 80, 40));
-        pushButton->setStyleSheet(QLatin1String("background-color: rgb(0, 157, 135);\n"
-"selection-background-color: rgb(0, 156, 134);\n"
-"color: rgb(255, 255, 255);\n"
-"border-color: rgba(255, 255, 255, 0);"));
         widget_2 = new QWidget(AddEditServerDialog);
         widget_2->setObjectName(QStringLiteral("widget_2"));
         widget_2->setGeometry(QRect(0, 0, 350, 40));
@@ -96,6 +94,7 @@ public:
         octet1->setInputMask(QStringLiteral(""));
         octet1->setText(QStringLiteral(""));
         octet1->setFrame(false);
+        octet1->setCursorPosition(0);
         octet1line = new QFrame(octet1Widget);
         octet1line->setObjectName(QStringLiteral("octet1line"));
         octet1line->setGeometry(QRect(5, 40, 60, 5));
@@ -107,6 +106,7 @@ public:
         serverNameLineEdit = new QLineEdit(widget_5);
         serverNameLineEdit->setObjectName(QStringLiteral("serverNameLineEdit"));
         serverNameLineEdit->setGeometry(QRect(10, 5, 330, 35));
+        serverNameLineEdit->setFocusPolicy(Qt::StrongFocus);
         serverNameLineEdit->setAutoFillBackground(false);
         serverNameLineEdit->setStyleSheet(QLatin1String("background-color: rgb(255, 255, 255);\n"
 "color: rgb(130, 131, 131);\n"
@@ -119,6 +119,8 @@ public:
         line_3->setGeometry(QRect(10, 40, 330, 5));
         line_3->setFrameShape(QFrame::HLine);
         line_3->setFrameShadow(QFrame::Sunken);
+        line_3->raise();
+        serverNameLineEdit->raise();
         octet2Widget = new QWidget(AddEditServerDialog);
         octet2Widget->setObjectName(QStringLiteral("octet2Widget"));
         octet2Widget->setGeometry(QRect(70, 130, 70, 50));
@@ -200,6 +202,48 @@ public:
         line_5->setGeometry(QRect(10, 40, 330, 5));
         line_5->setFrameShape(QFrame::HLine);
         line_5->setFrameShadow(QFrame::Sunken);
+        buttonBox = new QDialogButtonBox(AddEditServerDialog);
+        buttonBox->setObjectName(QStringLiteral("buttonBox"));
+        buttonBox->setGeometry(QRect(160, 360, 181, 41));
+        QSizePolicy sizePolicy(QSizePolicy::Minimum, QSizePolicy::Fixed);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(buttonBox->sizePolicy().hasHeightForWidth());
+        buttonBox->setSizePolicy(sizePolicy);
+        buttonBox->setStandardButtons(QDialogButtonBox::Cancel|QDialogButtonBox::Ok);
+        widget_8 = new QWidget(AddEditServerDialog);
+        widget_8->setObjectName(QStringLiteral("widget_8"));
+        widget_8->setGeometry(QRect(0, 270, 350, 40));
+        widget_8->setStyleSheet(QStringLiteral("background-color: rgb(221, 220, 220);"));
+        label_9 = new QLabel(widget_8);
+        label_9->setObjectName(QStringLiteral("label_9"));
+        label_9->setGeometry(QRect(10, 10, 330, 20));
+        label_9->setStyleSheet(QLatin1String("color: rgb(130, 131, 131);\n"
+"font: 75 13pt \"Cantarell\";"));
+        widget_7 = new QWidget(AddEditServerDialog);
+        widget_7->setObjectName(QStringLiteral("widget_7"));
+        widget_7->setGeometry(QRect(0, 310, 350, 50));
+        passwordLineEdit = new QLineEdit(widget_7);
+        passwordLineEdit->setObjectName(QStringLiteral("passwordLineEdit"));
+        passwordLineEdit->setGeometry(QRect(10, 5, 330, 35));
+        passwordLineEdit->setAutoFillBackground(false);
+        passwordLineEdit->setStyleSheet(QLatin1String("background-color: rgb(255, 255, 255);\n"
+"color: rgb(130, 131, 131);\n"
+"border-top-color: rgb(255, 255, 255);"));
+        passwordLineEdit->setInputMask(QStringLiteral(""));
+        passwordLineEdit->setText(QStringLiteral(""));
+        passwordLineEdit->setFrame(false);
+        line_6 = new QFrame(widget_7);
+        line_6->setObjectName(QStringLiteral("line_6"));
+        line_6->setGeometry(QRect(10, 40, 330, 5));
+        line_6->setFrameShape(QFrame::HLine);
+        line_6->setFrameShadow(QFrame::Sunken);
+        QWidget::setTabOrder(serverNameLineEdit, octet1);
+        QWidget::setTabOrder(octet1, octet1_2);
+        QWidget::setTabOrder(octet1_2, octet1_3);
+        QWidget::setTabOrder(octet1_3, octet1_4);
+        QWidget::setTabOrder(octet1_4, portLineEdit);
+        QWidget::setTabOrder(portLineEdit, passwordLineEdit);
 
         retranslateUi(AddEditServerDialog);
 
@@ -208,8 +252,7 @@ public:
 
     void retranslateUi(QDialog *AddEditServerDialog)
     {
-        AddEditServerDialog->setWindowTitle(QApplication::translate("AddEditServerDialog", "Dialog", 0));
-        pushButton->setText(QApplication::translate("AddEditServerDialog", "Save", 0));
+        AddEditServerDialog->setWindowTitle(QApplication::translate("AddEditServerDialog", "Server", 0));
         label_4->setText(QApplication::translate("AddEditServerDialog", "SERVER NAME", 0));
         label_6->setText(QApplication::translate("AddEditServerDialog", "IP ADDRESS", 0));
         octet1->setPlaceholderText(QString());
@@ -219,6 +262,8 @@ public:
         octet1_4->setPlaceholderText(QString());
         label_8->setText(QApplication::translate("AddEditServerDialog", "PORT", 0));
         portLineEdit->setPlaceholderText(QString());
+        label_9->setText(QApplication::translate("AddEditServerDialog", "PASSWORD", 0));
+        passwordLineEdit->setPlaceholderText(QString());
     } // retranslateUi
 
 };

@@ -16,32 +16,49 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    applicationmanager.cpp \
     MainWindow/addeditserverdialog.cpp \
-    channellist.cpp \
     conversation.cpp \
-    serveritem.cpp \
-    tcpclient.cpp \
-    udpplayer.cpp \
-    udpsender.cpp
+    logic/connection/tcpclient.cpp \
+    logic/connection/udpplayer.cpp \
+    logic/connection/udpsender.cpp \
+    logic/manager/applicationmanager.cpp \
+    logic/manager/filesmanager.cpp \
+    logic/manager/favouritesmanager.cpp \
+    informdialog.cpp \
+    logic/fieldvalidator.cpp \
+    logic/helper.cpp \
+    logic/model/server.cpp \
+    logic/operationslogger.cpp \
+    inputdialog.cpp
+
 
 HEADERS  += mainwindow.h \
-    applicationmanager.h \
     MainWindow/addeditserverdialog.h \
-    channellist.h \
     conversation.h \
-    serveritem.h \
-    tcpclient.h \
-    udpplayer.h \
-    udpsender.h
+    logic/connection/tcpclient.h \
+    logic/connection/udpplayer.h \
+    logic/connection/udpsender.h \
+    logic/manager/applicationmanager.h \
+    logic/manager/filesmanager.h \
+    logic/manager/favouritesmanager.h \
+    informdialog.h \
+    logic/fieldvalidator.h \
+    logic/helper.h \
+    logic/model/server.h \
+    logic/operationslogger.h \
+    inputdialog.h
+
 
 FORMS    += mainwindow.ui \
     MainWindow/addeditserverdialog.ui \
-    channellist.ui \
-    conversation.ui
+    conversation.ui \
+    informdialog.ui \
+    inputdialog.ui
 
 DISTFILES += \
     res/header.jpg
 
 RESOURCES += \
     res.qrc
+
+CONFIG += c++11\

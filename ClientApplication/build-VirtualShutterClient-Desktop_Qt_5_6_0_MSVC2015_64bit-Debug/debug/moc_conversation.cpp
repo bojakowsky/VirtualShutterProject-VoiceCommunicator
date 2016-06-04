@@ -19,8 +19,8 @@
 
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_Conversation_t {
-    QByteArrayData data[1];
-    char stringdata0[13];
+    QByteArrayData data[7];
+    char stringdata0[124];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -29,10 +29,18 @@ struct qt_meta_stringdata_Conversation_t {
     )
 static const qt_meta_stringdata_Conversation_t qt_meta_stringdata_Conversation = {
     {
-QT_MOC_LITERAL(0, 0, 12) // "Conversation"
+QT_MOC_LITERAL(0, 0, 12), // "Conversation"
+QT_MOC_LITERAL(1, 13, 21), // "on_muteButton_clicked"
+QT_MOC_LITERAL(2, 35, 0), // ""
+QT_MOC_LITERAL(3, 36, 27), // "on_disconnectButton_clicked"
+QT_MOC_LITERAL(4, 64, 11), // "refreshList"
+QT_MOC_LITERAL(5, 76, 21), // "on_moveButton_clicked"
+QT_MOC_LITERAL(6, 98, 25) // "on_muteUserButton_clicked"
 
     },
-    "Conversation"
+    "Conversation\0on_muteButton_clicked\0\0"
+    "on_disconnectButton_clicked\0refreshList\0"
+    "on_moveButton_clicked\0on_muteUserButton_clicked"
 };
 #undef QT_MOC_LITERAL
 
@@ -42,21 +50,44 @@ static const uint qt_meta_data_Conversation[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-       0,    0, // methods
+       5,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
        0,       // signalCount
 
+ // slots: name, argc, parameters, tag, flags
+       1,    0,   39,    2, 0x08 /* Private */,
+       3,    0,   40,    2, 0x08 /* Private */,
+       4,    0,   41,    2, 0x08 /* Private */,
+       5,    0,   42,    2, 0x08 /* Private */,
+       6,    0,   43,    2, 0x08 /* Private */,
+
+ // slots: parameters
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+
        0        // eod
 };
 
 void Conversation::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
-    Q_UNUSED(_o);
-    Q_UNUSED(_id);
-    Q_UNUSED(_c);
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        Conversation *_t = static_cast<Conversation *>(_o);
+        Q_UNUSED(_t)
+        switch (_id) {
+        case 0: _t->on_muteButton_clicked(); break;
+        case 1: _t->on_disconnectButton_clicked(); break;
+        case 2: _t->refreshList(); break;
+        case 3: _t->on_moveButton_clicked(); break;
+        case 4: _t->on_muteUserButton_clicked(); break;
+        default: ;
+        }
+    }
     Q_UNUSED(_a);
 }
 
@@ -84,6 +115,15 @@ int Conversation::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     _id = QMainWindow::qt_metacall(_c, _id, _a);
     if (_id < 0)
         return _id;
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        if (_id < 5)
+            qt_static_metacall(this, _c, _id, _a);
+        _id -= 5;
+    } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
+        if (_id < 5)
+            *reinterpret_cast<int*>(_a[0]) = -1;
+        _id -= 5;
+    }
     return _id;
 }
 QT_END_MOC_NAMESPACE

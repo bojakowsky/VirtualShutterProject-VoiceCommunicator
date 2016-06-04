@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Conversation</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QWidget" name="widget" native="true">
@@ -26,14 +26,13 @@
     <property name="styleSheet">
      <string notr="true">background-image: url(:/res/header-long.jpg);</string>
     </property>
-    <zorder>label_2</zorder>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="disconnectButton">
     <property name="geometry">
      <rect>
-      <x>570</x>
+      <x>604</x>
       <y>15</y>
-      <width>215</width>
+      <width>181</width>
       <height>35</height>
      </rect>
     </property>
@@ -57,10 +56,10 @@ border-color: rgba(255, 255, 255, 0);</string>
      </size>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="muteButton">
     <property name="geometry">
      <rect>
-      <x>520</x>
+      <x>560</x>
       <y>15</y>
       <width>35</width>
       <height>35</height>
@@ -109,7 +108,7 @@ border-color: rgba(255, 255, 255, 0);</string>
 font: 75 13pt &quot;Cantarell&quot;;</string>
      </property>
      <property name="text">
-      <string>CHANNEL NAME</string>
+      <string>CHANNELS: USERS</string>
      </property>
     </widget>
     <widget class="QGraphicsView" name="graphicsView">
@@ -134,13 +133,13 @@ font: 75 13pt &quot;Cantarell&quot;;</string>
       <enum>QGraphicsView::AnchorViewCenter</enum>
      </property>
     </widget>
-    <widget class="QLabel" name="label_3">
+    <widget class="QLabel" name="myUsernameLabel">
      <property name="geometry">
       <rect>
-       <x>590</x>
+       <x>209</x>
        <y>10</y>
-       <width>150</width>
-       <height>19</height>
+       <width>531</width>
+       <height>20</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -148,14 +147,14 @@ font: 75 13pt &quot;Cantarell&quot;;</string>
 font: 75 13pt &quot;Cantarell&quot;;</string>
      </property>
      <property name="text">
-      <string>0/36</string>
+      <string>Hello, YourUserName</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
      </property>
     </widget>
    </widget>
-   <widget class="QListView" name="listView">
+   <widget class="QListWidget" name="conversationList">
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -177,7 +176,7 @@ font: 75 13pt &quot;Cantarell&quot;;</string>
     <property name="styleSheet">
      <string notr="true">background-color: rgb(221, 220, 220);</string>
     </property>
-    <widget class="QListWidget" name="listWidget">
+    <widget class="QListWidget" name="logList">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -204,12 +203,12 @@ font: 75 11pt &quot;Cantarell&quot;;</string>
       <string>LOG</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_2">
+    <widget class="QLabel" name="serverInfoLabel">
      <property name="geometry">
       <rect>
-       <x>570</x>
+       <x>64</x>
        <y>10</y>
-       <width>215</width>
+       <width>721</width>
        <height>20</height>
       </rect>
      </property>
@@ -225,6 +224,70 @@ font: 75 9pt &quot;Cantarell&quot;;</string>
      </property>
     </widget>
    </widget>
+   <widget class="QPushButton" name="moveButton">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>15</y>
+      <width>90</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(130, 131, 131);
+selection-background-color: rgb(0, 156, 134);
+color: rgb(255, 255, 255);
+border-color: rgba(255, 255, 255, 0);</string>
+    </property>
+    <property name="text">
+     <string>MOVE</string>
+    </property>
+    <property name="icon">
+     <iconset resource="res.qrc">
+      <normaloff>:/res/room-icon-01.png</normaloff>:/res/room-icon-01.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>18</width>
+      <height>18</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="muteUserButton">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>15</y>
+      <width>90</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(130, 131, 131);
+selection-background-color: rgb(0, 156, 134);
+color: rgb(255, 255, 255);
+border-color: rgba(255, 255, 255, 0);</string>
+    </property>
+    <property name="text">
+     <string>MUTE</string>
+    </property>
+    <property name="icon">
+     <iconset resource="res.qrc">
+      <normaloff>:/res/room-icon-01.png</normaloff>:/res/room-icon-01.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>18</width>
+      <height>18</height>
+     </size>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -232,7 +295,7 @@ font: 75 9pt &quot;Cantarell&quot;;</string>
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>26</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>

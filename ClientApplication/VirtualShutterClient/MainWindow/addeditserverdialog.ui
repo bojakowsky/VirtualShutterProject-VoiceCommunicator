@@ -7,34 +7,15 @@
     <x>0</x>
     <y>0</y>
     <width>350</width>
-    <height>320</height>
+    <height>401</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Server</string>
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(255, 255, 255);</string>
   </property>
-  <widget class="QPushButton" name="pushButton">
-   <property name="geometry">
-    <rect>
-     <x>260</x>
-     <y>270</y>
-     <width>80</width>
-     <height>40</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(0, 157, 135);
-selection-background-color: rgb(0, 156, 134);
-color: rgb(255, 255, 255);
-border-color: rgba(255, 255, 255, 0);</string>
-   </property>
-   <property name="text">
-    <string>Save</string>
-   </property>
-  </widget>
   <widget class="QWidget" name="widget_2" native="true">
    <property name="geometry">
     <rect>
@@ -130,6 +111,9 @@ border-top-color: rgb(255, 255, 255);</string>
     <property name="frame">
      <bool>false</bool>
     </property>
+    <property name="cursorPosition">
+     <number>0</number>
+    </property>
     <property name="placeholderText">
      <string/>
     </property>
@@ -166,6 +150,9 @@ border-top-color: rgb(255, 255, 255);</string>
       <height>35</height>
      </rect>
     </property>
+    <property name="focusPolicy">
+     <enum>Qt::StrongFocus</enum>
+    </property>
     <property name="autoFillBackground">
      <bool>false</bool>
     </property>
@@ -200,6 +187,8 @@ border-top-color: rgb(255, 255, 255);</string>
      <enum>Qt::Horizontal</enum>
     </property>
    </widget>
+   <zorder>line_3</zorder>
+   <zorder>serverNameLineEdit</zorder>
   </widget>
   <widget class="QWidget" name="octet2Widget" native="true">
    <property name="geometry">
@@ -443,7 +432,118 @@ border-top-color: rgb(255, 255, 255);</string>
     </property>
    </widget>
   </widget>
+  <widget class="QDialogButtonBox" name="buttonBox">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>360</y>
+     <width>181</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="standardButtons">
+    <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+   </property>
+  </widget>
+  <widget class="QWidget" name="widget_8" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>270</y>
+     <width>350</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(221, 220, 220);</string>
+   </property>
+   <widget class="QLabel" name="label_9">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>330</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(130, 131, 131);
+font: 75 13pt &quot;Cantarell&quot;;</string>
+    </property>
+    <property name="text">
+     <string>PASSWORD</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="widget_7" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>310</y>
+     <width>350</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <widget class="QLineEdit" name="passwordLineEdit">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>5</y>
+      <width>330</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(130, 131, 131);
+border-top-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="inputMask">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string notr="true"/>
+    </property>
+    <property name="frame">
+     <bool>false</bool>
+    </property>
+    <property name="placeholderText">
+     <string/>
+    </property>
+   </widget>
+   <widget class="Line" name="line_6">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>40</y>
+      <width>330</width>
+      <height>5</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+  </widget>
  </widget>
+ <tabstops>
+  <tabstop>serverNameLineEdit</tabstop>
+  <tabstop>octet1</tabstop>
+  <tabstop>octet1_2</tabstop>
+  <tabstop>octet1_3</tabstop>
+  <tabstop>octet1_4</tabstop>
+  <tabstop>portLineEdit</tabstop>
+  <tabstop>passwordLineEdit</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

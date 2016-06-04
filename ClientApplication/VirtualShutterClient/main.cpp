@@ -1,28 +1,25 @@
 #include "mainwindow.h"
-#include "channellist.h"
 #include "conversation.h"
-#include "applicationmanager.h"
+#include "logic/manager/applicationmanager.h"
 #include <QApplication>
 #include <QIODevice>
 #include <QtMultimedia/QAudioOutput>
 #include <QtMultimedia/QAudioInput>
 #include <QtMultimedia/QAudioFormat>
 #include <QUdpSocket>
-#include "udpplayer.h"
-#include "udpsender.h"
-#include "tcpclient.h"
+#include "logic/connection/udpplayer.h"
+#include "logic/connection/udpsender.h"
+#include "logic/connection/tcpclient.h"
 int main(int argc, char *argv[])
 {
 
     QApplication a(argc, argv);
-    ApplicationManager *applicationManager = new ApplicationManager;
+    ApplicationManager *applicationManager = new ApplicationManager();
     //TCPClient *Client = new TCPClient();
     //Client->Connect();
     MainWindow w;
+    w.setManager(applicationManager);
     w.show();
-
-    //ChannelList q;
-    //q.show();
 
     //Conversation e;
     //e.show();
