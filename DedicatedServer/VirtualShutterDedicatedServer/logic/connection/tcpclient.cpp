@@ -73,7 +73,7 @@ void TCPClient::readyRead()
                 std::string msg(ex.what());
                 if (msg == std::string("Server user limit reached")){
                     socket->write("Error|Server user limit reached, sorry");
-                    socket->disconnectFromHost();
+                    //socket->disconnectFromHost();
                 }
                 else if (msg == std::string("Banned")){
                     socket->write("Banned");
@@ -82,7 +82,7 @@ void TCPClient::readyRead()
                 else if (msg == std::string("Wrong server password")){
                     socket->write("Error|Wrong server password, try again");
                     EventsManager::AddEvent("User typed wrong password connecting the server: " + socket->peerAddress().toString().toStdString());
-                    socket->disconnectFromHost();
+                    //socket->disconnectFromHost();
                 }
             }
             break;

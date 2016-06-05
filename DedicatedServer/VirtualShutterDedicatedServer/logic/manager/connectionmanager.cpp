@@ -31,3 +31,10 @@ void ConnectionManager::Run()
     this->server->StartServer(this->address, this->port);
     this->broadcast->StartBroadcast(this->address, this->port);
 }
+
+void ConnectionManager::Stop()
+{
+    this->broadcast->StopBroadcast();
+    this->userManager->users.clear();
+    this->userManager->decUsersActual();
+}

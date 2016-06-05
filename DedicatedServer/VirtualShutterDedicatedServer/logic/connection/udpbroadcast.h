@@ -17,6 +17,7 @@ public:
     explicit UDPBroadcast(QObject *parent = 0);
     UDPBroadcast(ChannelsManager *channelMaanger, UserManager *userManager, QObject *parent = 0);
     void StartBroadcast(QHostAddress addr, int port);
+    void StopBroadcast();
 
     //int j = 0;
 
@@ -29,10 +30,10 @@ public slots:
 //    QAudioInput* audio; // Class member
 
 private:
-    QUdpSocket *socketListener;
-    QUdpSocket *socketSender;
-    ChannelsManager *channelMaanger;
-    UserManager *userManager;
+    QUdpSocket *socketListener = 0;
+    QUdpSocket *socketSender = 0;
+    ChannelsManager *channelMaanger = 0;
+    UserManager *userManager = 0;
 
     QHostAddress address;
     int port;

@@ -113,11 +113,13 @@ void UserManager::Move(int iu, std::string channelName)
 }
 
 void UserManager::incUsersActual(){
-    this->usersActual++;
+    this->usersActual = users.size();
+    qDebug(std::to_string(usersActual).c_str());
 }
 
 void UserManager::decUsersActual(){
     this->usersActual = users.size();
+    qDebug(std::to_string(usersActual).c_str());
 }
 
 bool UserManager::isLimitReached() const{

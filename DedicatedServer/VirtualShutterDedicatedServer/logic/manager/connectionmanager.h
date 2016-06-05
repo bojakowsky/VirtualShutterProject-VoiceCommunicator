@@ -17,6 +17,7 @@ public:
     void setPort(int value);
 
     void Run();
+    void Stop();
 
 private:
     UDPBroadcast* broadcast = 0;

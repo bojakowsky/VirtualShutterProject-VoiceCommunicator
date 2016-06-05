@@ -23,6 +23,11 @@ void UDPBroadcast::StartBroadcast(QHostAddress addr, int port)
     connect(socketListener, SIGNAL(readyRead()), this, SLOT(broadcastSend()));
 }
 
+void UDPBroadcast::StopBroadcast(){
+    socketListener->close();
+    delete socketListener;
+}
+
 void UDPBroadcast::broadcastSend(){
     while (socketListener->hasPendingDatagrams()){
         QByteArray data;

@@ -29,6 +29,7 @@ Channel ChannelsManager::Get(int i)
 
 Channel ChannelsManager::TryMove(std::string channelName, std::string password, UserManager *usrManager)
 {
+    qDebug(password.c_str());
     if (password == "@") password = "";
 
     for (int i = 0; i < this->channels.size(); ++i){
@@ -40,7 +41,7 @@ Channel ChannelsManager::TryMove(std::string channelName, std::string password, 
                     std::string bufCh = usrManager->Get(i).getChannelName();
                     if (bufCh == channelName){
                         userCount++;
-                        if (userCount > buf.getNumberOfUsersAllowed()){
+                        if (userCount >= buf.getNumberOfUsersAllowed()){
                             throw ChannelsManagerException("Channel user limit reached");
                         }
                     }

@@ -27,16 +27,19 @@ void ServerManager::Configure(QHostAddress ip, int port, std::string serverName,
 
 void ServerManager::Run(){
     this->isRunning = true;
+    qDebug(std::to_string(userManager->users.size()).c_str());
     connectionManager = new ConnectionManager(userManager, channelsManager);
     connectionManager->setAddress(ip);
     connectionManager->setPort(port);
     connectionManager->Run();
+    qDebug(std::to_string(userManager->users.size()).c_str());
 }
 
 void ServerManager::Stop(){
     this->isRunning = false;
+    connectionManager->Stop();
     delete connectionManager;
-    userManager->users.clear();
+
 }
 
 ChannelsManager *ServerManager::getChannelsManager() const
