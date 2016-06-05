@@ -11,8 +11,7 @@ MainWindow::MainWindow(QWidget *parent, ApplicationManager *appManager) :
 
 MainWindow::~MainWindow()
 {
-    delete ui;
-    delete manager;
+
 }
 
 void MainWindow::OpenSingleServerDialog(Server *server)
@@ -81,6 +80,17 @@ void MainWindow::setManager(ApplicationManager *value)
 {
     manager = value;
     FillWidgetList(ui->serverList, manager->getFavourites()->getServerListAsString());
+}
+
+void MainWindow::closing()
+{
+    delete ui;
+    delete conversation;
+    delete addEditServerDialog;
+    delete informDialog;
+    delete manager;
+    //this->deleteLater();
+
 }
 
 void MainWindow::FillWidgetList(QListWidget *list, std::vector<std::string> data)

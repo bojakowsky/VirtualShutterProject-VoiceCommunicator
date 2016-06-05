@@ -1,4 +1,1 @@
-192.168.0.100:666 MyServer_password 
-192.168.0.100:1234 MyServer_NoPassword 
-123.123.123.123:12345 dsadsadsadsadsadsadsadasadssad 
-192.168.0.100:1000 sda dsa
+empty

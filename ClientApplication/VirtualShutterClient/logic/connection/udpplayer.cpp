@@ -2,7 +2,11 @@
 
 UDPPlayer::UDPPlayer(QObject *parent) : QObject(parent)
 {
-    qDebug("UDPPlayer created");
+}
+
+UDPPlayer::~UDPPlayer()
+{
+    qDebug("UDPPlayer dead");
 }
 
 void UDPPlayer::Listen(QHostAddress local, int port)
@@ -44,6 +48,8 @@ void UDPPlayer::Disconnect()
         delete output;
         output = NULL;
     }
+
+    qDebug("UDPPlayer dead");
 }
 
 void UDPPlayer::playData()

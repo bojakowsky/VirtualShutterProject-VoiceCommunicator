@@ -8,12 +8,11 @@ TCPClient::TCPClient(QObject *parent) : QObject(parent)
 TCPClient::~TCPClient()
 {
     qDebug("TCPClient dead");
-    if (socket == nullptr)
-    {
-        OperationsLogger::write("Info", "Disconnected from server", list);
-        socket->disconnectFromHost();
-        delete socket;
-    }
+
+    //OperationsLogger::write("Info", "Disconnected from server", list);
+    //socket->disconnectFromHost();
+    delete socket;
+    socket = 0;
 
 }
 

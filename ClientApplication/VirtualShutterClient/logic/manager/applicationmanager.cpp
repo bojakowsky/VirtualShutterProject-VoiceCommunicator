@@ -14,6 +14,7 @@ ApplicationManager::~ApplicationManager()
     delete udpPlayer;
     delete udpSender;
     delete tcpClient;
+    qDebug("ApplicationManager dead");
 }
 
 void ApplicationManager::CheckServerData(){

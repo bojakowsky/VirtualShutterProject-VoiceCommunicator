@@ -3,6 +3,7 @@
 #include "logic/manager/applicationmanager.h"
 #include <QApplication>
 #include <QIODevice>
+#include <QObject>
 #include <QtMultimedia/QAudioOutput>
 #include <QtMultimedia/QAudioInput>
 #include <QtMultimedia/QAudioFormat>
@@ -14,13 +15,15 @@ int main(int argc, char *argv[])
 {
 
     QApplication a(argc, argv);
+
     QCoreApplication::addLibraryPath("./");
     ApplicationManager *applicationManager = new ApplicationManager();
-    //TCPClient *Client = new TCPClient();
-    //Client->Connect();
     MainWindow w;
+
     w.setManager(applicationManager);
     w.show();
+
+    QObject::connect(&a, SIGNAL(aboutToQuit()), &w, SLOT(closing()));
 
     //Conversation e;
     //e.show();
@@ -29,4 +32,9 @@ int main(int argc, char *argv[])
     //new UdpSender();
 
     return a.exec();
+}
+
+void closing()
+{
+
 }

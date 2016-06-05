@@ -9,6 +9,7 @@ class UdpSender
 {
 public:
     UdpSender();
+    ~UdpSender();
     void Connect(QHostAddress address, int port);
     void Disconnect();
 

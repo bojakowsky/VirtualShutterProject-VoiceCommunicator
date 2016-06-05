@@ -26,6 +26,9 @@ public:
 
     void setManager(ApplicationManager *value);
 
+public slots:
+    void closing();
+
 private slots:
     void on_addServerButton_clicked();
 

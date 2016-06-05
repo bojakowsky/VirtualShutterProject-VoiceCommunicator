@@ -11,6 +11,7 @@ FavouritesManager::~FavouritesManager()
     SaveServerList();
     filesManager->SaveToFile(serverListAsString);
     delete filesManager;
+    qDebug("FavouritesManager dead");
 }
 
 void FavouritesManager::AddServer(Server server)
@@ -62,6 +63,7 @@ void FavouritesManager::LoadServerListFromServerListAsString(std::vector<std::st
     for (int i = 0; i < vect.size(); ++i)
     {
         std::string buf = vect.at(i);
+        if (buf == "empty") break;
         std::vector<std::string> vecBuf = Helper::split(buf, ':');
         QHostAddress addr(vecBuf.at(0).c_str());
         std::vector<std::string> vecBuf2 = Helper::split(vecBuf.at(1), ' ');

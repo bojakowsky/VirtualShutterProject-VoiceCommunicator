@@ -31,13 +31,13 @@ std::vector<std::string> FilesManager::ReadFromFile()
     QString filename = "fav.txt";
     QFile file (filename);
     QFileInfo fi(file);
-    qDebug(fi.absoluteFilePath().toStdString().c_str());
+    //qDebug(fi.absoluteFilePath().toStdString().c_str());
     QTextStream stream ( &file );
     if (file.open(QIODevice::ReadOnly))
     {
         while (!stream.atEnd()) {
             std::string s = stream.readLine().toStdString();
-            qDebug(s.c_str());
+            //qDebug(s.c_str());
             fav.push_back(s);
         }
     }

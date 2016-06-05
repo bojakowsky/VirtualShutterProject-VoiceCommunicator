@@ -2,8 +2,13 @@
 
 UdpSender::UdpSender()
 {
-    qDebug("UdpSender created");
+    //qDebug("UdpSender created");
 
+}
+
+UdpSender::~UdpSender()
+{
+    qDebug("UDPPlayer dead");
 }
 
 void UdpSender::Connect(QHostAddress address, int port)
@@ -43,6 +48,7 @@ void UdpSender::Disconnect()
         delete input;
         input = NULL;
     }
+    qDebug("UDPSender dead");
     //socket->flush();
     //delete input;
     //delete socket;

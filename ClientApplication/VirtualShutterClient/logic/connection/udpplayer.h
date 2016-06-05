@@ -14,6 +14,7 @@ class UDPPlayer : public QObject
     Q_OBJECT
 public:
     explicit UDPPlayer(QObject *parent = 0);
+    ~UDPPlayer();
     void Listen(QHostAddress local, int port);
     void Disconnect();
 
