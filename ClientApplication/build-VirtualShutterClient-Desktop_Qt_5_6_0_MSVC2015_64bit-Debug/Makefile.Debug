@@ -467,6 +467,10 @@ debug\moc_mainwindow.cpp: C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\QMainW
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QTextStream \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QIODevice \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QFile \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QString \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QFileInfo \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qfileinfo.h \
+		..\VirtualShutterClient\logic\fieldvalidator.h \
 		..\VirtualShutterClient\logic\connection\tcpclient.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtNetwork\QTcpSocket \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtNetwork\qtcpsocket.h \
@@ -474,7 +478,6 @@ debug\moc_mainwindow.cpp: C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\QMainW
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qtimer.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qbasictimer.h \
 		..\VirtualShutterClient\logic\operationslogger.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QString \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\QListWidget \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qlistwidget.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qlistview.h \
@@ -512,7 +515,6 @@ debug\moc_mainwindow.cpp: C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\QMainW
 		..\VirtualShutterClient\MainWindow\addeditserverdialog.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\QDialog \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qdialog.h \
-		..\VirtualShutterClient\logic\fieldvalidator.h \
 		..\VirtualShutterClient\informdialog.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\QAbstractButton \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qabstractbutton.h \
@@ -535,7 +537,6 @@ debug\moc_mainwindow.cpp: C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\QMainW
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qdatetime.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qbuffer.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qdir.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qfileinfo.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qdiriterator.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qfileselector.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QStringList \
@@ -827,6 +828,10 @@ debug\moc_conversation.cpp: ..\VirtualShutterClient\logic\manager\applicationman
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QFile \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qfile.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qfiledevice.h \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QString \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QFileInfo \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qfileinfo.h \
+		..\VirtualShutterClient\logic\fieldvalidator.h \
 		..\VirtualShutterClient\logic\connection\tcpclient.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtNetwork\QTcpSocket \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtNetwork\qtcpsocket.h \
@@ -834,7 +839,6 @@ debug\moc_conversation.cpp: ..\VirtualShutterClient\logic\manager\applicationman
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qtimer.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qbasictimer.h \
 		..\VirtualShutterClient\logic\operationslogger.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QString \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\QListWidget \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qlistwidget.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qlistview.h \
@@ -924,7 +928,6 @@ debug\moc_conversation.cpp: ..\VirtualShutterClient\logic\manager\applicationman
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qdatetime.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qbuffer.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qdir.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qfileinfo.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qdiriterator.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qfileselector.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QStringList \
@@ -1610,6 +1613,10 @@ debug\main.obj: ..\VirtualShutterClient\main.cpp ../VirtualShutterClient/mainwin
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QTextStream \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QIODevice \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QFile \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QString \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QFileInfo \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qfileinfo.h \
+		../VirtualShutterClient/logic/fieldvalidator.h \
 		../VirtualShutterClient/logic/connection/tcpclient.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtNetwork\QTcpSocket \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtNetwork\qtcpsocket.h \
@@ -1617,7 +1624,6 @@ debug\main.obj: ..\VirtualShutterClient\main.cpp ../VirtualShutterClient/mainwin
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qtimer.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qbasictimer.h \
 		../VirtualShutterClient/logic/operationslogger.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QString \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\QListWidget \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qlistwidget.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qlistview.h \
@@ -1655,7 +1661,6 @@ debug\main.obj: ..\VirtualShutterClient\main.cpp ../VirtualShutterClient/mainwin
 		../VirtualShutterClient/MainWindow/addeditserverdialog.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\QDialog \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qdialog.h \
-		../VirtualShutterClient/logic/fieldvalidator.h \
 		../VirtualShutterClient/informdialog.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\QAbstractButton \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qabstractbutton.h \
@@ -1678,7 +1683,6 @@ debug\main.obj: ..\VirtualShutterClient\main.cpp ../VirtualShutterClient/mainwin
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qdatetime.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qbuffer.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qdir.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qfileinfo.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qdiriterator.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qfileselector.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QStringList \
@@ -1893,6 +1897,10 @@ debug\mainwindow.obj: ..\VirtualShutterClient\mainwindow.cpp ../VirtualShutterCl
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QTextStream \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QIODevice \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QFile \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QString \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QFileInfo \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qfileinfo.h \
+		../VirtualShutterClient/logic/fieldvalidator.h \
 		../VirtualShutterClient/logic/connection/tcpclient.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtNetwork\QTcpSocket \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtNetwork\qtcpsocket.h \
@@ -1900,7 +1908,6 @@ debug\mainwindow.obj: ..\VirtualShutterClient\mainwindow.cpp ../VirtualShutterCl
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qtimer.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qbasictimer.h \
 		../VirtualShutterClient/logic/operationslogger.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QString \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\QListWidget \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qlistwidget.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qlistview.h \
@@ -1938,7 +1945,6 @@ debug\mainwindow.obj: ..\VirtualShutterClient\mainwindow.cpp ../VirtualShutterCl
 		../VirtualShutterClient/MainWindow/addeditserverdialog.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\QDialog \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qdialog.h \
-		../VirtualShutterClient/logic/fieldvalidator.h \
 		../VirtualShutterClient/informdialog.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\QAbstractButton \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qabstractbutton.h \
@@ -1961,7 +1967,6 @@ debug\mainwindow.obj: ..\VirtualShutterClient\mainwindow.cpp ../VirtualShutterCl
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qdatetime.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qbuffer.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qdir.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qfileinfo.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qdiriterator.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qfileselector.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QStringList \
@@ -2050,37 +2055,7 @@ debug\mainwindow.obj: ..\VirtualShutterClient\mainwindow.cpp ../VirtualShutterCl
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qxmlstream.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qtcoreversion.h \
 		../VirtualShutterClient/inputdialog.h \
-		ui_mainwindow.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QVariant \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\QAction \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qaction.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qactiongroup.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\QApplication \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qapplication.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qdesktopwidget.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtGui\qguiapplication.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtGui\qinputmethod.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\QButtonGroup \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qbuttongroup.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\QFrame \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\QHeaderView \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qheaderview.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\QLabel \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qlabel.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\QLineEdit \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qlineedit.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtGui\qtextcursor.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtGui\qtextformat.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtGui\qpen.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtGui\qtextoption.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\QMenuBar \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qmenubar.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qmenu.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\QStatusBar \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qstatusbar.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\QToolBar \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qtoolbar.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\QWidget
+		ui_mainwindow.h
 
 debug\addeditserverdialog.obj: ..\VirtualShutterClient\MainWindow\addeditserverdialog.cpp ../VirtualShutterClient/MainWindow/addeditserverdialog.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\QDialog \
@@ -2201,27 +2176,33 @@ debug\addeditserverdialog.obj: ..\VirtualShutterClient\MainWindow\addeditserverd
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qpushbutton.h \
 		../VirtualShutterClient/logic/helper.h \
 		ui_addeditserverdialog.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QVariant \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\QAction \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qaction.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qactiongroup.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\QApplication \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qapplication.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qcoreapplication.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qeventloop.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qdesktopwidget.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtGui\qguiapplication.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtGui\qinputmethod.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\QButtonGroup \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qbuttongroup.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\QDialogButtonBox \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qdialogbuttonbox.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\QFrame \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qframe.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\QHeaderView \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qheaderview.h \
+		../VirtualShutterClient/mainwindow.h \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\QMainWindow \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qmainwindow.h \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qtabwidget.h \
+		../VirtualShutterClient/logic/manager/applicationmanager.h \
+		../VirtualShutterClient/logic/manager/favouritesmanager.h \
+		../VirtualShutterClient/logic/manager/filesmanager.h \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QObject \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QTextStream \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QIODevice \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QFile \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QString \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QFileInfo \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qfileinfo.h \
+		../VirtualShutterClient/logic/connection/tcpclient.h \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtNetwork\QTcpSocket \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtNetwork\qtcpsocket.h \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QTimer \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qtimer.h \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qbasictimer.h \
+		../VirtualShutterClient/logic/operationslogger.h \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\QListWidget \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qlistwidget.h \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qlistview.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qabstractitemview.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qframe.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qabstractitemmodel.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qitemselectionmodel.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qabstractitemdelegate.h \
@@ -2233,38 +2214,7 @@ debug\addeditserverdialog.obj: ..\VirtualShutterClient\MainWindow\addeditserverd
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qabstractslider.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qstyle.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qtabbar.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qtabwidget.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qrubberband.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\QLabel \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qlabel.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\QLineEdit \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qlineedit.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtGui\qtextcursor.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtGui\qtextformat.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtGui\qpen.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtGui\qtextoption.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\QWidget \
-		../VirtualShutterClient/mainwindow.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\QMainWindow \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qmainwindow.h \
-		../VirtualShutterClient/logic/manager/applicationmanager.h \
-		../VirtualShutterClient/logic/manager/favouritesmanager.h \
-		../VirtualShutterClient/logic/manager/filesmanager.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QObject \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QTextStream \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QIODevice \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QFile \
-		../VirtualShutterClient/logic/connection/tcpclient.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtNetwork\QTcpSocket \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtNetwork\qtcpsocket.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QTimer \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qtimer.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qbasictimer.h \
-		../VirtualShutterClient/logic/operationslogger.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QString \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\QListWidget \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qlistwidget.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qlistview.h \
 		../VirtualShutterClient/logic/connection/udpplayer.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtMultimedia\QAudioOutput \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtMultimedia\qaudiooutput.h \
@@ -2298,7 +2248,6 @@ debug\addeditserverdialog.obj: ..\VirtualShutterClient\MainWindow\addeditserverd
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qdatetime.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qbuffer.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qdir.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qfileinfo.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qdiriterator.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qfileselector.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QStringList \
@@ -2323,7 +2272,9 @@ debug\addeditserverdialog.obj: ..\VirtualShutterClient\MainWindow\addeditserverd
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qjsondocument.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qjsonobject.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qabstracteventdispatcher.h \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qeventloop.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qabstractnativeeventfilter.h \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qcoreapplication.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qmath.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qmetaobject.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qmimedata.h \
@@ -2385,14 +2336,7 @@ debug\addeditserverdialog.obj: ..\VirtualShutterClient\MainWindow\addeditserverd
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qxmlstream.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qtcoreversion.h \
 		../VirtualShutterClient/inputdialog.h \
-		ui_mainwindow.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\QMenuBar \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qmenubar.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qmenu.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\QStatusBar \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qstatusbar.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\QToolBar \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qtoolbar.h
+		ui_mainwindow.h
 
 debug\conversation.obj: ..\VirtualShutterClient\conversation.cpp ../VirtualShutterClient/conversation.h \
 		../VirtualShutterClient/logic/manager/applicationmanager.h \
@@ -2475,6 +2419,10 @@ debug\conversation.obj: ..\VirtualShutterClient\conversation.cpp ../VirtualShutt
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QFile \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qfile.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qfiledevice.h \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QString \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QFileInfo \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qfileinfo.h \
+		../VirtualShutterClient/logic/fieldvalidator.h \
 		../VirtualShutterClient/logic/connection/tcpclient.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtNetwork\QTcpSocket \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtNetwork\qtcpsocket.h \
@@ -2482,7 +2430,6 @@ debug\conversation.obj: ..\VirtualShutterClient\conversation.cpp ../VirtualShutt
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qtimer.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qbasictimer.h \
 		../VirtualShutterClient/logic/operationslogger.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QString \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\QListWidget \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qlistwidget.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qlistview.h \
@@ -2572,7 +2519,6 @@ debug\conversation.obj: ..\VirtualShutterClient\conversation.cpp ../VirtualShutt
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qdatetime.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qbuffer.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qdir.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qfileinfo.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qdiriterator.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qfileselector.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QStringList \
@@ -2663,38 +2609,7 @@ debug\conversation.obj: ..\VirtualShutterClient\conversation.cpp ../VirtualShutt
 		../VirtualShutterClient/inputdialog.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\QDialog \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qdialog.h \
-		ui_conversation.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QVariant \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\QAction \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qaction.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qactiongroup.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\QApplication \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qapplication.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qdesktopwidget.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtGui\qguiapplication.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtGui\qinputmethod.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\QButtonGroup \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qbuttongroup.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\QGraphicsView \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qgraphicsview.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtGui\qpainter.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtGui\qtextoption.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtGui\qpen.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qscrollarea.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qgraphicsscene.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\QHeaderView \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qheaderview.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\QLabel \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qlabel.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\QMenuBar \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qmenubar.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qmenu.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\QPushButton \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qpushbutton.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qabstractbutton.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\QStatusBar \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qstatusbar.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\QWidget
+		ui_conversation.h
 
 debug\tcpclient.obj: ..\VirtualShutterClient\logic\connection\tcpclient.cpp ../VirtualShutterClient/logic/connection/tcpclient.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QObject \
@@ -3080,6 +2995,10 @@ debug\applicationmanager.obj: ..\VirtualShutterClient\logic\manager\applicationm
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QFile \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qfile.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qfiledevice.h \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QString \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QFileInfo \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qfileinfo.h \
+		../VirtualShutterClient/logic/fieldvalidator.h \
 		../VirtualShutterClient/logic/connection/tcpclient.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtNetwork\QTcpSocket \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtNetwork\qtcpsocket.h \
@@ -3087,7 +3006,6 @@ debug\applicationmanager.obj: ..\VirtualShutterClient\logic\manager\applicationm
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qtimer.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qbasictimer.h \
 		../VirtualShutterClient/logic/operationslogger.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QString \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\QListWidget \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qlistwidget.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qlistview.h \
@@ -3232,7 +3150,10 @@ debug\filesmanager.obj: ..\VirtualShutterClient\logic\manager\filesmanager.cpp .
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QIODevice \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QFile \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qfile.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qfiledevice.h
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qfiledevice.h \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QString \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QFileInfo \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qfileinfo.h
 
 debug\favouritesmanager.obj: ..\VirtualShutterClient\logic\manager\favouritesmanager.cpp ../VirtualShutterClient/logic/manager/favouritesmanager.h \
 		../VirtualShutterClient/logic/model/server.h \
@@ -3312,7 +3233,11 @@ debug\favouritesmanager.obj: ..\VirtualShutterClient\logic\manager\favouritesman
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QIODevice \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QFile \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qfile.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qfiledevice.h
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qfiledevice.h \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QString \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QFileInfo \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qfileinfo.h \
+		../VirtualShutterClient/logic/fieldvalidator.h
 
 debug\informdialog.obj: ..\VirtualShutterClient\informdialog.cpp ../VirtualShutterClient/informdialog.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\QDialog \
@@ -3420,44 +3345,7 @@ debug\informdialog.obj: ..\VirtualShutterClient\informdialog.cpp ../VirtualShutt
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qfiledevice.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtGui\qvector2d.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtGui\qtouchdevice.h \
-		ui_informdialog.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QVariant \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\QAction \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qaction.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtGui\qicon.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qactiongroup.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\QApplication \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qapplication.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qcoreapplication.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qeventloop.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qdesktopwidget.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtGui\qguiapplication.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtGui\qinputmethod.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\QButtonGroup \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qbuttongroup.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\QHeaderView \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qheaderview.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qabstractitemview.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qabstractscrollarea.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qframe.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qabstractitemmodel.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qitemselectionmodel.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qabstractitemdelegate.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qstyleoption.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qabstractspinbox.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtGui\qvalidator.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qregularexpression.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qslider.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qabstractslider.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qstyle.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qtabbar.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qtabwidget.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qrubberband.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\QLabel \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qlabel.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\QPushButton \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qpushbutton.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qabstractbutton.h
+		ui_informdialog.h
 
 debug\fieldvalidator.obj: ..\VirtualShutterClient\logic\fieldvalidator.cpp ../VirtualShutterClient/logic/fieldvalidator.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtNetwork\QHostAddress \
@@ -3835,48 +3723,7 @@ debug\inputdialog.obj: ..\VirtualShutterClient\inputdialog.cpp ../VirtualShutter
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qfiledevice.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtGui\qvector2d.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtGui\qtouchdevice.h \
-		ui_inputdialog.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QVariant \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\QAction \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qaction.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtGui\qicon.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qactiongroup.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\QApplication \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qapplication.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qcoreapplication.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qeventloop.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qdesktopwidget.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtGui\qguiapplication.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtGui\qinputmethod.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\QButtonGroup \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qbuttongroup.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\QHeaderView \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qheaderview.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qabstractitemview.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qabstractscrollarea.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qframe.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qabstractitemmodel.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qitemselectionmodel.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qabstractitemdelegate.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qstyleoption.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qabstractspinbox.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtGui\qvalidator.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qregularexpression.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qslider.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qabstractslider.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qstyle.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qtabbar.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qtabwidget.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qrubberband.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\QLineEdit \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qlineedit.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtGui\qtextcursor.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtGui\qtextformat.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtGui\qpen.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtGui\qtextoption.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\QPushButton \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qpushbutton.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qabstractbutton.h
+		ui_inputdialog.h
 
 debug\qrc_res.obj: debug\qrc_res.cpp 
 

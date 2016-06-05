@@ -39,12 +39,12 @@ private slots:
     void on_connectToServerButton_clicked();
 
 private:
-    Ui::MainWindow *ui;
-    Conversation *conversation;
+    Ui::MainWindow *ui = 0;
+    Conversation *conversation = 0;
 
     AddEditServerDialog *addEditServerDialog = 0;
     InformDialog *informDialog = 0;
-    ApplicationManager *manager;
+    ApplicationManager *manager = 0;
 
     void FillWidgetList(QListWidget *list, std::vector<std::string> data);
 };

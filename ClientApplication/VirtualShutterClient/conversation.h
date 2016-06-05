@@ -31,12 +31,12 @@ private slots:
     void on_muteUserButton_clicked();
 
 private:
-    Ui::Conversation *ui;
-    QMainWindow *main;
+    Ui::Conversation *ui = 0;
+    QMainWindow *main = 0;
     InputDialog *input = 0;
 
-    ApplicationManager *manager;
-    QTimer *listTimer;
+    ApplicationManager *manager = 0;
+    QTimer *listTimer = 0;
 };
 
 #endif // CONVERSATION_H

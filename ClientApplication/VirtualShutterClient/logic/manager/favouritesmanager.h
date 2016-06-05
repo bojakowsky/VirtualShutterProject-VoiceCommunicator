@@ -29,7 +29,7 @@ private:
     std::vector<Server> serversList;
     std::vector<std::string> serverListAsString;
 
-    FilesManager *filesManager;
+    FilesManager *filesManager = 0;
 
 
 };

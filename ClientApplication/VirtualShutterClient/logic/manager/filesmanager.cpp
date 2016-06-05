@@ -14,7 +14,7 @@ void FilesManager::SaveToFile(std::vector<std::string> fav)
 {
     QString filename = "fav.txt";
     QFile file (filename);
-    if (file.open(QIODevice::ReadWrite))
+    if (file.open(QIODevice::ReadWrite | QIODevice::Truncate | QIODevice::Text ))
     {
         QTextStream stream ( &file );
         if (fav.size() == 0) stream << "empty";

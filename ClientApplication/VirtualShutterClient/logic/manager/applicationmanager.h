@@ -36,10 +36,10 @@ public:
 protected:
 
 private:
-    FavouritesManager *favourites;
-    TCPClient *tcpClient;
-    UDPPlayer *udpPlayer;
-    UdpSender *udpSender;
+    FavouritesManager *favourites = 0;
+    TCPClient *tcpClient = 0;
+    UDPPlayer *udpPlayer = 0;
+    UdpSender *udpSender = 0;
 
     std::string userName;
     QHostAddress ip_address;

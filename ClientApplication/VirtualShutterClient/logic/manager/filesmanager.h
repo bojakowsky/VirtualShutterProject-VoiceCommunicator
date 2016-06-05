@@ -9,6 +9,7 @@
 #include <QFileInfo>
 #include <string>
 #include <vector>
+#include <QCoreApplication>
 class FilesManager
 {
 public:

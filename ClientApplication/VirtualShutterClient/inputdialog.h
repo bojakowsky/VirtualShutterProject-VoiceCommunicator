@@ -22,7 +22,7 @@ private slots:
     void on_pushButton_clicked();
 
 private:
-    Ui::InputDialog *ui;
+    Ui::InputDialog *ui = 0;
     QString input;
 };
 
