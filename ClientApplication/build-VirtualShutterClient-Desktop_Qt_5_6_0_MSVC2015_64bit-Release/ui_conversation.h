@@ -16,7 +16,6 @@
 #include <QtWidgets/QGraphicsView>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
-#include <QtWidgets/QListView>
 #include <QtWidgets/QListWidget>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
@@ -36,12 +35,14 @@ public:
     QWidget *widget_2;
     QLabel *label;
     QGraphicsView *graphicsView;
-    QLabel *allUsersLabel;
-    QListView *listView;
+    QLabel *myUsernameLabel;
+    QListWidget *conversationList;
     QWidget *widget_3;
-    QListWidget *listWidget;
+    QListWidget *logList;
     QLabel *label_5;
-    QLabel *label_2;
+    QLabel *serverInfoLabel;
+    QPushButton *moveButton;
+    QPushButton *muteUserButton;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -58,7 +59,7 @@ public:
         widget->setStyleSheet(QStringLiteral("background-image: url(:/res/header-long.jpg);"));
         disconnectButton = new QPushButton(centralwidget);
         disconnectButton->setObjectName(QStringLiteral("disconnectButton"));
-        disconnectButton->setGeometry(QRect(570, 15, 215, 35));
+        disconnectButton->setGeometry(QRect(604, 15, 181, 35));
         disconnectButton->setStyleSheet(QLatin1String("background-color: rgb(214, 83, 81);\n"
 "selection-background-color: rgb(0, 156, 134);\n"
 "color: rgb(255, 255, 255);\n"
@@ -69,7 +70,7 @@ public:
         disconnectButton->setIconSize(QSize(18, 18));
         muteButton = new QPushButton(centralwidget);
         muteButton->setObjectName(QStringLiteral("muteButton"));
-        muteButton->setGeometry(QRect(520, 15, 35, 35));
+        muteButton->setGeometry(QRect(560, 15, 35, 35));
         muteButton->setStyleSheet(QStringLiteral("background-color: rgb(130, 131, 131);"));
         QIcon icon1;
         icon1.addFile(QStringLiteral(":/res/room-icon-04.png"), QSize(), QIcon::Normal, QIcon::Off);
@@ -91,33 +92,55 @@ public:
         graphicsView->setFrameShape(QFrame::NoFrame);
         graphicsView->setFrameShadow(QFrame::Plain);
         graphicsView->setResizeAnchor(QGraphicsView::AnchorViewCenter);
-        allUsersLabel = new QLabel(widget_2);
-        allUsersLabel->setObjectName(QStringLiteral("allUsersLabel"));
-        allUsersLabel->setGeometry(QRect(590, 10, 150, 19));
-        allUsersLabel->setStyleSheet(QLatin1String("color: rgb(255,255,255);\n"
+        myUsernameLabel = new QLabel(widget_2);
+        myUsernameLabel->setObjectName(QStringLiteral("myUsernameLabel"));
+        myUsernameLabel->setGeometry(QRect(209, 10, 531, 20));
+        myUsernameLabel->setStyleSheet(QLatin1String("color: rgb(255,255,255);\n"
 "font: 75 13pt \"Cantarell\";"));
-        allUsersLabel->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
-        listView = new QListView(centralwidget);
-        listView->setObjectName(QStringLiteral("listView"));
-        listView->setGeometry(QRect(0, 105, 800, 350));
+        myUsernameLabel->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+        conversationList = new QListWidget(centralwidget);
+        conversationList->setObjectName(QStringLiteral("conversationList"));
+        conversationList->setGeometry(QRect(0, 105, 800, 350));
         widget_3 = new QWidget(centralwidget);
         widget_3->setObjectName(QStringLiteral("widget_3"));
         widget_3->setGeometry(QRect(0, 455, 800, 95));
         widget_3->setStyleSheet(QStringLiteral("background-color: rgb(221, 220, 220);"));
-        listWidget = new QListWidget(widget_3);
-        listWidget->setObjectName(QStringLiteral("listWidget"));
-        listWidget->setGeometry(QRect(0, 30, 800, 65));
+        logList = new QListWidget(widget_3);
+        logList->setObjectName(QStringLiteral("logList"));
+        logList->setGeometry(QRect(0, 30, 800, 65));
         label_5 = new QLabel(widget_3);
         label_5->setObjectName(QStringLiteral("label_5"));
         label_5->setGeometry(QRect(15, 5, 66, 20));
         label_5->setStyleSheet(QLatin1String("color: rgb(130, 131, 131);\n"
 "font: 75 11pt \"Cantarell\";"));
-        label_2 = new QLabel(widget_3);
-        label_2->setObjectName(QStringLiteral("label_2"));
-        label_2->setGeometry(QRect(570, 10, 215, 20));
-        label_2->setStyleSheet(QLatin1String("color: rgb(130, 131, 131);\n"
+        serverInfoLabel = new QLabel(widget_3);
+        serverInfoLabel->setObjectName(QStringLiteral("serverInfoLabel"));
+        serverInfoLabel->setGeometry(QRect(64, 10, 721, 20));
+        serverInfoLabel->setStyleSheet(QLatin1String("color: rgb(130, 131, 131);\n"
 "font: 75 9pt \"Cantarell\";"));
-        label_2->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+        serverInfoLabel->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+        moveButton = new QPushButton(centralwidget);
+        moveButton->setObjectName(QStringLiteral("moveButton"));
+        moveButton->setEnabled(true);
+        moveButton->setGeometry(QRect(360, 15, 90, 35));
+        moveButton->setStyleSheet(QLatin1String("background-color: rgb(130, 131, 131);\n"
+"selection-background-color: rgb(0, 156, 134);\n"
+"color: rgb(255, 255, 255);\n"
+"border-color: rgba(255, 255, 255, 0);"));
+        QIcon icon2;
+        icon2.addFile(QStringLiteral(":/res/room-icon-01.png"), QSize(), QIcon::Normal, QIcon::Off);
+        moveButton->setIcon(icon2);
+        moveButton->setIconSize(QSize(18, 18));
+        muteUserButton = new QPushButton(centralwidget);
+        muteUserButton->setObjectName(QStringLiteral("muteUserButton"));
+        muteUserButton->setEnabled(true);
+        muteUserButton->setGeometry(QRect(460, 15, 90, 35));
+        muteUserButton->setStyleSheet(QLatin1String("background-color: rgb(130, 131, 131);\n"
+"selection-background-color: rgb(0, 156, 134);\n"
+"color: rgb(255, 255, 255);\n"
+"border-color: rgba(255, 255, 255, 0);"));
+        muteUserButton->setIcon(icon2);
+        muteUserButton->setIconSize(QSize(18, 18));
         Conversation->setCentralWidget(centralwidget);
         menubar = new QMenuBar(Conversation);
         menubar->setObjectName(QStringLiteral("menubar"));
@@ -134,13 +157,15 @@ public:
 
     void retranslateUi(QMainWindow *Conversation)
     {
-        Conversation->setWindowTitle(QApplication::translate("Conversation", "MainWindow", 0));
+        Conversation->setWindowTitle(QApplication::translate("Conversation", "Conversation", 0));
         disconnectButton->setText(QApplication::translate("Conversation", "DISCONNECT", 0));
         muteButton->setText(QString());
-        label->setText(QApplication::translate("Conversation", "CHANNEL NAME", 0));
-        allUsersLabel->setText(QApplication::translate("Conversation", "0/36", 0));
+        label->setText(QApplication::translate("Conversation", "CHANNELS: USERS", 0));
+        myUsernameLabel->setText(QApplication::translate("Conversation", "Hello, YourUserName", 0));
         label_5->setText(QApplication::translate("Conversation", "LOG", 0));
-        label_2->setText(QApplication::translate("Conversation", "SERVERNAME - 127.0.0.1:1234", 0));
+        serverInfoLabel->setText(QApplication::translate("Conversation", "SERVERNAME - 127.0.0.1:1234", 0));
+        moveButton->setText(QApplication::translate("Conversation", "MOVE", 0));
+        muteUserButton->setText(QApplication::translate("Conversation", "MUTE", 0));
     } // retranslateUi
 
 };

@@ -14,6 +14,7 @@ int main(int argc, char *argv[])
 {
 
     QApplication a(argc, argv);
+    QCoreApplication::addLibraryPath("./");
     ApplicationManager *applicationManager = new ApplicationManager();
     //TCPClient *Client = new TCPClient();
     //Client->Connect();

@@ -71,7 +71,7 @@ void Conversation::Live(Server server, std::string nickname)
     manager->getTcpClient()->setList(ui->logList);
     manager->getTcpClient()->Connect(server.getIp(), server.getPort(), nickname, server.getPassword());
     manager->getUdpSender()->Connect(server.getIp(), server.getPort());
-    manager->getUdpPlayer()->Listen(manager->getUdpSender()->getLocalAddress(), server.getPort());
+    manager->getUdpPlayer()->Listen(manager->getUdpSender()->getLocalAddress(), server.getPort()-1);
 
     std::string infoLabel = server.getName() + " - " + server.getIp().toString().toStdString() + ":" + std::to_string(server.getPort());
     ui->serverInfoLabel->setText(QString::fromStdString(infoLabel.c_str()));
