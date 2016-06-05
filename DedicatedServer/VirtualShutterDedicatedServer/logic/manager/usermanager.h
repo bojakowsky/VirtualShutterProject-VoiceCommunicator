@@ -20,6 +20,7 @@ public:
     bool IsBanned(QHostAddress address);
     void Unban(int i);
     void Move(int iu, std::string channelName);
+    void Move(QHostAddress a, std::string channelName);
 
     std::vector<User> users;
     std::vector<User> bannedUsers;
@@ -29,9 +30,15 @@ public:
     void decUsersActual();
     bool isLimitReached() const;
 
+    void setUsersLimit(int value);
+    void setServerPassword(const std::string &value);
+
+    bool checkIfWasMoved(QHostAddress addr);
+    void moveAllFromDeletedOrEditedChannel(std::string channelName);
+
 private:
     int usersLimit;
-    int usersActual;
+    int usersActual = 0;
     std::string serverPassword;
 };
 

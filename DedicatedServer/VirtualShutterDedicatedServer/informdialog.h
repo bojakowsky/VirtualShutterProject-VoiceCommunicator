@@ -22,7 +22,7 @@ private slots:
 
 
 private:
-    Ui::InformDialog *ui;
+    Ui::InformDialog *ui = 0;
 
 };
 

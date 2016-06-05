@@ -4,7 +4,7 @@ UDPPlayer::UDPPlayer(QObject *parent) : QObject(parent)
 {
     socket = new QUdpSocket();
     QHostAddress serverAddress = QHostAddress("192.168.0.100");
-    socket->bind(serverAddress, 1002);
+    socket->bind(serverAddress, 1234);
     QAudioFormat format;
     format.setSampleRate(128000);
     format.setChannelCount(1);

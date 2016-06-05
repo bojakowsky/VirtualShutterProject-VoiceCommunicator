@@ -12,12 +12,21 @@ class ConnectionManager
 public:
     ConnectionManager(UserManager *userManager, ChannelsManager *channelManager);
     ~ConnectionManager();
-private:
-    UDPBroadcast* broadcast;
-    TCPServer* server;
 
-    UserManager *userManager;
-    ChannelsManager *channelManager;
+    void setAddress(const QHostAddress &value);
+    void setPort(int value);
+
+    void Run();
+
+private:
+    UDPBroadcast* broadcast = 0;
+    TCPServer* server = 0;
+
+    UserManager *userManager = 0;
+    ChannelsManager *channelManager = 0;
+
+    QHostAddress address;
+    int port;
 };
 
 #endif // CONNECTIONMANAGER_H

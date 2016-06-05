@@ -7,6 +7,8 @@
 #include "channeldialog.h"
 #include "informdialog.h"
 #include <QStringListModel>
+#include "logic/manager/activitiesmanager.h"
+#include "logic/manager/eventsmanager.h"
 
 namespace Ui {
 class MainWindow;
@@ -26,6 +28,7 @@ public:
 
 private slots:
     void updateUserList();
+    void logToFile();
     void handleSwitch();
     void showGeneralConfig();
     void showUsersConfig();
@@ -47,12 +50,18 @@ private slots:
 
     void on_moveButton_clicked();
 
+    void on_clearActivitiesButton_clicked();
+
+    void on_clearEventButton_clicked();
+
 private:
-    Ui::MainWindow *ui;
-    ServerManager *manager;
+    Ui::MainWindow *ui = 0;
+    ServerManager *manager = 0;
 
     InformDialog *error = 0;
     ChannelDialog *channelDialog = 0;
+
+    std::string global;
 
     //QStringListModel *channelListViewModel = 0;
 

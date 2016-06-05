@@ -11,10 +11,11 @@ TCPServer::TCPServer(ChannelsManager *channelMaanger, UserManager *userManager)
     this->userManager = userManager;
 }
 
-void TCPServer::StartServer()
+void TCPServer::StartServer(QHostAddress address, int port)
 {
-    QHostAddress addr("192.168.0.100");
-    if (listen(addr, 1234)){
+    this->address = address;
+    this->port = port;
+    if (listen(address, port)){
         qDebug() << "Server started";
     }
     else qDebug() << "Server not started";
@@ -23,6 +24,7 @@ void TCPServer::incomingConnection(qintptr handle)
 {
     qDebug() << "New incoming connection";
     TCPClient *client = new TCPClient(channelMaanger, userManager, this);
+    client->setSendersPort(this->port);
     client->SetSocket(handle);
 
 

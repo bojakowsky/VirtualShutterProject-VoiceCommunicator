@@ -16,11 +16,14 @@ class UDPBroadcast : public QObject
 public:
     explicit UDPBroadcast(QObject *parent = 0);
     UDPBroadcast(ChannelsManager *channelMaanger, UserManager *userManager, QObject *parent = 0);
-    int j = 0;
+    void StartBroadcast(QHostAddress addr, int port);
+
+    //int j = 0;
+
 public slots:
     void broadcastSend();
 
-//    void init();
+    //    void init();
 //    void init1();
 //    QFile destinationFile;   // Class member
 //    QAudioInput* audio; // Class member
@@ -30,6 +33,9 @@ private:
     QUdpSocket *socketSender;
     ChannelsManager *channelMaanger;
     UserManager *userManager;
+
+    QHostAddress address;
+    int port;
 };
 
 #endif // UDPBROADCAST_H

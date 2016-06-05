@@ -8,6 +8,9 @@
 #include <QHostAddress>
 #include "logic/manager/usermanager.h"
 #include "logic/manager/channelsmanager.h"
+#include "logic/manager/activitiesmanager.h"
+#include "logic/manager/eventsmanager.h"
+
 class TCPClient : public QObject
 {
     Q_OBJECT
@@ -15,18 +18,21 @@ public:
     explicit TCPClient(QObject *parent = 0);
     TCPClient(ChannelsManager *channelMaanger, UserManager *userManager, QObject *parent = 0);
     void SetSocket(int descriptor);
+    void setSendersPort(int value);
+
 signals:
 
 public slots:
     void connected();
     void disconnected();
     void readyRead();
-    void TaskResult(std::string Structure);
+    void TaskResult(QString Structure);
 
 private:
-    QTcpSocket *socket;
-    ChannelsManager *channelMaanger;
-    UserManager *userManager;
+    QTcpSocket *socket = 0;
+    ChannelsManager *channelMaanger = 0;
+    UserManager *userManager = 0;
+    int sendersPort;
 };
 
 #endif // TCPCLIENT_H

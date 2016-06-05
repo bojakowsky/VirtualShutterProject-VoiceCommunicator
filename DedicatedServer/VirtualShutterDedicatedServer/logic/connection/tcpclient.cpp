@@ -1,6 +1,7 @@
 #include "tcpclient.h"
 #include "logic/helper.h"
 
+
 TCPClient::TCPClient(QObject *parent) : QObject(parent)
 {
     QThreadPool::globalInstance()->setMaxThreadCount(32);
@@ -33,6 +34,7 @@ void TCPClient::connected()
 void TCPClient::disconnected()
 {
     qDebug("client disconnected");
+    ActivitiesManager::AddActivity("Client disconnected: " +socket->peerAddress().toString().toStdString());
     if (userManager->Exist(socket->peerAddress())){
         userManager->Remove(socket->peerAddress());
     }
@@ -50,30 +52,37 @@ void TCPClient::readyRead()
     //qDebug() << socket->peerAddress().toString();
     std::vector<std::string> data = Helper::split(socket->readAll().toStdString(), '|');
     std::string action = data.at(0);
+    qDebug(action.c_str());
     switch (str2int(action.c_str()))
     {
         case str2int("Hi"):
         {
-            User user(socket->peerAddress(), 1234, data.at(1));
+            User user(socket->peerAddress(), this->sendersPort, data.at(1));
             try
             {
-
-                userManager->TryAdd(user, data.at(2));
-                qDebug(userManager->Get(0).getUserName().c_str());
+                std::string psswd = data.at(2);
+                if (psswd == "@")
+                    psswd = "";
+                userManager->TryAdd(user, psswd);
+                //qDebug(userManager->Get(0).getUserName().c_str());
                 socket->write("Hi");
+                ActivitiesManager::AddActivity("Client connected: " + socket->peerAddress().toString().toStdString());
             }
-            catch(const UserManagerException& ex)
+            catch(UserManagerException& ex)
             {
-                if (ex.what() == "Server user limit reached"){
-                    socket->write(ex.what());
-                    socket->disconnect();
+                std::string msg(ex.what());
+                if (msg == std::string("Server user limit reached")){
+                    socket->write("Error|Server user limit reached, sorry");
+                    socket->disconnectFromHost();
                 }
-                else if (ex.what() == "Banned"){
+                else if (msg == std::string("Banned")){
                     socket->write("Banned");
+                    EventsManager::AddEvent("Banned user tried to connect: " + socket->peerAddress().toString().toStdString());
                 }
-                else if (ex.what() == "Wrong server password"){
-                    socket->write(ex.what());
-                    socket->disconnect();
+                else if (msg == std::string("Wrong server password")){
+                    socket->write("Error|Wrong server password, try again");
+                    EventsManager::AddEvent("User typed wrong password connecting the server: " + socket->peerAddress().toString().toStdString());
+                    socket->disconnectFromHost();
                 }
             }
             break;
@@ -83,59 +92,81 @@ void TCPClient::readyRead()
             if (userManager->Exist(socket->peerAddress()))
             {
                 if (userManager->IsBanned(socket->peerAddress()))
+                {
                     socket->write("Banned");
+                    EventsManager::AddEvent("Banned user tried to connect: " + socket->peerAddress().toString().toStdString());
+                }
                 else{
                     try {
                         std::string channel = data.at(1);
                         std::string password = data.at(2);
-                        Channel ch = channelMaanger->TryGet(channel, password, userManager);
+                        Channel ch = channelMaanger->TryMove(channel, password, userManager);
+                        userManager->Move(socket->peerAddress(), ch.getName());
                         socket->write("MoveOk");
+                        ActivitiesManager::AddActivity("Client changed channel: " +socket->peerAddress().toString().toStdString() + " to - " + channel);
                     }
-                    catch(const ChannelsManagerException &ex)
+                    catch(ChannelsManagerException& ex)
                     {
-                        if (ex.what() == "Channel not found")
+                        std::string msg(ex.what());
+                        qDebug(msg.c_str());
+                        if (msg == std::string("Channel not found"))
                             socket->write("MoveError|Channel not found");
-                        else if (ex.what() == "Wrong password")
+                        else if (msg == std::string("Wrong password"))
+                        {
                             socket->write("MoveError|Wrong password");
-                        else if (ex.what() == "Channel user limit reached")
+                            EventsManager::AddEvent("User typed wrong password changing channel: " + socket->peerAddress().toString().toStdString());
+                        }
+                        else if (msg == std::string("Channel user limit reached"))
                             socket->write("MoveError|Channel user limit reached");
                     }
                 }
             }
             else {
                 socket->write("Kicked");
-                socket->disconnect();
+                socket->disconnectFromHost();
             }
             break;
         }
         case str2int("Info"):
         {
             if (userManager->Exist(socket->peerAddress())){
-                if (userManager->IsBanned(socket->peerAddress()))
+                if (userManager->IsBanned(socket->peerAddress())){
                     socket->write("Banned");
+                    EventsManager::AddEvent("Banned user tried to connect: " + socket->peerAddress().toString().toStdString());
+                }
+                else if (userManager->checkIfWasMoved(socket->peerAddress()))
+                {
+                    socket->write("Move");
+                }
                 else{
                     ClientTask *task = new ClientTask();
                     task->setManagers(channelMaanger, userManager);
                     task->setAutoDelete(true);
-                    connect(task, SIGNAL(Result(std::string)), this, SLOT(TaskResult(std::string)), Qt::QueuedConnection);
+                    connect(task, SIGNAL(Result(QString)), this, SLOT(TaskResult(QString)), Qt::QueuedConnection);
                     QThreadPool::globalInstance()->start(task);
                 }
             }
             else {
                 socket->write("Kicked");
-                socket->disconnect();
+                socket->disconnectFromHost();
             }
             break;
         }
         default:
             socket->write("UnknownError");
-            socket->disconnect();
+            EventsManager::AddEvent("UnknownError occured in connection between server and " + socket->peerAddress().toString().toStdString());
+            socket->disconnectFromHost();
     }
 }
 
-void TCPClient::TaskResult(std::string Structure)
+void TCPClient::TaskResult(QString Structure)
 {
     QByteArray Buffer;
-    Buffer.append(QString::fromStdString(Structure));
+    Buffer.append(QString("Info|") + Structure);
     socket->write(Buffer);
+}
+
+void TCPClient::setSendersPort(int value)
+{
+    sendersPort = value;
 }

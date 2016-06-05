@@ -30,7 +30,7 @@ Channel ChannelDialog::createChannel()
 
         FieldValidator validator;
         channel.setName(validator.stringIsEmptyChecker("Channel name", ui->channelNameEdit->text().toStdString()));
-        channel.setNumberOfUsersAllowed(validator.intFieldChecker("Max users", ui->maxUsersEdit->text().toStdString(), 2, 16));
+        channel.setNumberOfUsersAllowed(validator.intFieldChecker("Max users", ui->maxUsersEdit->text().toStdString(), 2, 32));
         channel.setPassword(ui->passwordEdit->text().toStdString());
     }
     catch(const std::exception& ex){

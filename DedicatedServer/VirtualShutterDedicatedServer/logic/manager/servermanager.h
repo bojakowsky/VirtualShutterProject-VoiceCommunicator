@@ -55,10 +55,9 @@ private:
     int numberOfUsersAllowed;
     bool isRunning;
 
-    ChannelsManager *channelsManager;
-    UserManager *userManager;
-    ConnectionManager *connectionManager;
-    FileManager *fileManager;
+    ChannelsManager *channelsManager = 0;
+    UserManager *userManager = 0;
+    ConnectionManager *connectionManager = 0;
 
 };
 

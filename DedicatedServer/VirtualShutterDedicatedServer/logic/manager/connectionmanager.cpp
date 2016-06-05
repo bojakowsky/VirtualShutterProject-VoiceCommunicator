@@ -8,12 +8,26 @@ ConnectionManager::ConnectionManager(UserManager *userManager, ChannelsManager *
     this->server = new TCPServer(channelManager, userManager);
     this->broadcast = new UDPBroadcast(channelManager, userManager);
 
-    this->server->StartServer();
-    this->broadcast->broadcastSend();
 }
 
 ConnectionManager::~ConnectionManager()
 {
     delete server;
     delete broadcast;
+}
+
+void ConnectionManager::setAddress(const QHostAddress &value)
+{
+    address = value;
+}
+
+void ConnectionManager::setPort(int value)
+{
+    port = value;
+}
+
+void ConnectionManager::Run()
+{
+    this->server->StartServer(this->address, this->port);
+    this->broadcast->StartBroadcast(this->address, this->port);
 }

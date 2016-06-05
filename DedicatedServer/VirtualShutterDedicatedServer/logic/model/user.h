@@ -24,12 +24,17 @@ public:
     std::string getChannelName() const;
     void setChannelName(const std::string &value);
 
+    bool getWasMoved() const;
+    void setWasMoved(bool value);
+
 private:
     QHostAddress ip;
     int port;
     std::string userName;
     bool isBanned = false;
     std::string channelName = "Global";
+
+    bool wasMoved = false;
 };
 
 #endif // USER_H

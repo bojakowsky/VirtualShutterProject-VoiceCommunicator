@@ -13,7 +13,7 @@ class TCPServer : public QTcpServer
 public:
     explicit TCPServer(QObject *parent = 0);
     TCPServer(ChannelsManager *channelMaanger, UserManager *userManager);
-    void StartServer();
+    void StartServer(QHostAddress address, int port);
 
 protected:
     void incomingConnection(qintptr handle);
@@ -23,8 +23,11 @@ signals:
 public slots:
 
 private:
-    ChannelsManager *channelMaanger;
-    UserManager *userManager;
+    ChannelsManager *channelMaanger = 0;
+    UserManager *userManager = 0;
+
+    int port;
+    QHostAddress address;
 };
 
 #endif // TCPSERVER_H

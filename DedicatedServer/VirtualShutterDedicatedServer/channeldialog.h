@@ -9,7 +9,7 @@
 #include <string>
 #include <QAbstractButton>
 #include <QPushButton>
-
+#include "logic/manager/channelsmanager.h"
 namespace Ui {
 class ChannelDialog;
 }
@@ -30,7 +30,7 @@ private slots:
     void accept();
 
 private:
-    Ui::ChannelDialog *ui;
+    Ui::ChannelDialog *ui = 0;
     InformDialog *error = 0;
     Channel createChannel();
     Channel editChannel();

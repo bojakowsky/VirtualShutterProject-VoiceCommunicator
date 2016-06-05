@@ -12,13 +12,13 @@ void ChannelsManager::Add(Channel ch)
 
 void ChannelsManager::Remove(int i)
 {
-    std::vector<Channel>::iterator it;
+    //std::vector<Channel>::iterator it;
     this->channels.erase(this->channels.begin()+i);
 }
 
 void ChannelsManager::Update(int i, Channel ch)
 {
-    std::vector<Channel>::iterator it;
+    //std::vector<Channel>::iterator it;
     this->channels.at(i) = ch;
 }
 
@@ -27,8 +27,10 @@ Channel ChannelsManager::Get(int i)
     return this->channels.at(i);
 }
 
-Channel ChannelsManager::TryGet(std::string channelName, std::string password, UserManager *usrManager)
+Channel ChannelsManager::TryMove(std::string channelName, std::string password, UserManager *usrManager)
 {
+    if (password == "@") password = "";
+
     for (int i = 0; i < this->channels.size(); ++i){
         Channel buf = this->channels.at(i);
         if (buf.getName() == channelName){
@@ -44,10 +46,11 @@ Channel ChannelsManager::TryGet(std::string channelName, std::string password, U
                     }
 
                 }
-                return this->channels.at(i);
             }
-            else
+            else {
                 throw ChannelsManagerException("Wrong password");
+            }
+            return this->channels.at(i);
         }
     }
     throw ChannelsManagerException("Channel not found");
@@ -67,15 +70,20 @@ std::string ChannelsManager::BuildChannelStructure(UserManager *usrManager)
                 if (userCount == 0)
                     userNames += bufUser.getUserName();
                 else
-                    userNames = userNames + "," + bufUser.getUserName();
+                    userNames = userNames + ", " + bufUser.getUserName();
                 userCount++;
             }
         }
-        std::string password = "F";
-        if (buf.getPassword() != "") password = "T";
-        structure = structure + "/" + buf.getName() + "|" +
-                std::to_string(userCount) + "|" + std::to_string(buf.getNumberOfUsersAllowed()) + "|" + password + "|" +
+        std::string password = "";
+        if (buf.getPassword() != "") password = "*";
+        structure = structure + "!" + password + buf.getName() + " (" +
+                std::to_string(userCount) + "/" + std::to_string(buf.getNumberOfUsersAllowed()) + "): " + /*password + "/" +*/
                 userNames;
     }
     return structure;
+}
+
+int ChannelsManager::getChannelsCount()
+{
+    return this->channels.size();
 }

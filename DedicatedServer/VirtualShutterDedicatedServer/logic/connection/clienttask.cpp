@@ -13,6 +13,6 @@ void ClientTask::setManagers(ChannelsManager *channelsManager, UserManager *user
 
 void ClientTask::run()
 {
-    std::string structure = channelsManager->BuildChannelStructure(userManager);
+    QString structure = QString::fromStdString(channelsManager->BuildChannelStructure(userManager));
     emit Result(structure);
 }

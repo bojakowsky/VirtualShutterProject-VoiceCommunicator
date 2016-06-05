@@ -62,3 +62,13 @@ void User::setChannelName(const std::string &value)
     channelName = value;
 }
 
+bool User::getWasMoved() const
+{
+    return wasMoved;
+}
+
+void User::setWasMoved(bool value)
+{
+    wasMoved = value;
+}
+

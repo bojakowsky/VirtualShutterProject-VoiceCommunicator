@@ -12,6 +12,7 @@ void UserManager::Add(User user)
         user.setIsBanned(true);
 
     this->users.push_back(user);
+    incUsersActual();
 }
 
 void UserManager::TryAdd(User user, std::string password)
@@ -48,6 +49,7 @@ void UserManager::Remove(QHostAddress address)
         if (user.getIp() == address){
             std::vector<User>::iterator it;
             this->users.erase(this->users.begin()+i);
+            decUsersActual();
             break;
         }
     }
@@ -66,6 +68,7 @@ void UserManager::Kick(int i)
 {
     std::vector<User>::iterator it;
     this->users.erase(this->users.begin()+i);
+    decUsersActual();
 }
 
 void UserManager::Ban(int i)
@@ -93,11 +96,20 @@ void UserManager::Unban(int i)
     }
 }
 
+void UserManager::Move(QHostAddress a, std::string channelName)
+{
+    for (int i = 0 ; i < this->users.size(); ++i){
+        if (users.at(i).getIp() == a){
+            users.at(i).setChannelName(channelName);
+            break;
+        }
+    }
+}
+
 void UserManager::Move(int iu, std::string channelName)
 {
-    std::vector<User>::iterator it;
-    User user = this->users.at(iu);
-    user.setChannelName(channelName);
+    users.at(iu).setChannelName(channelName);
+    users.at(iu).setWasMoved(true);
 }
 
 void UserManager::incUsersActual(){
@@ -105,11 +117,49 @@ void UserManager::incUsersActual(){
 }
 
 void UserManager::decUsersActual(){
-    this->usersActual--;
+    this->usersActual = users.size();
 }
 
 bool UserManager::isLimitReached() const{
-    if (this->usersActual <= this->usersLimit)
+    qDebug(std::to_string(this->usersActual).c_str());
+    qDebug(std::to_string(this->usersLimit).c_str());
+    if (this->usersActual + 1 <= this->usersLimit)
         return false;
     return true;
+}
+
+void UserManager::setUsersLimit(int value)
+{
+    usersLimit = value;
+}
+
+void UserManager::setServerPassword(const std::string &value)
+{
+    serverPassword = value;
+}
+
+bool UserManager::checkIfWasMoved(QHostAddress addr)
+{
+    for (int i = 0 ; i < this->users.size(); ++i){
+        User user = this->users.at(i);
+        if (user.getIp() == addr)
+        {
+            if (user.getWasMoved())
+            {
+                user.setWasMoved(false);
+                this->users.at(i) = user;
+                return true;
+            } else return false;
+        }
+    }
+    return true;
+}
+
+void UserManager::moveAllFromDeletedOrEditedChannel(std::string channelName)
+{
+    for (int i = 0 ; i < this->users.size(); ++i){
+        User user = this->users.at(i);
+        if (user.getChannelName() == channelName)
+            Move(i, "Global");
+    }
 }

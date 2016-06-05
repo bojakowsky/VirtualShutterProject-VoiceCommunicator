@@ -10,14 +10,17 @@ UDPBroadcast::UDPBroadcast(QObject *parent) : QObject(parent)
 
 UDPBroadcast::UDPBroadcast(ChannelsManager *channelMaanger, UserManager *userManager, QObject *parent) : QObject(parent)
 {
-    socketListener = new QUdpSocket();
-    QHostAddress serverAddress("192.168.0.100");
-    socketListener->bind(serverAddress, 1002);
-    connect(socketListener, SIGNAL(readyRead()), this, SLOT(broadcastSend()));
-
     this->channelMaanger = channelMaanger;
     this->userManager = userManager;
+}
 
+void UDPBroadcast::StartBroadcast(QHostAddress addr, int port)
+{
+    this->address = addr;
+    this->port = port;
+    socketListener = new QUdpSocket();
+    socketListener->bind(this->address, this->port);
+    connect(socketListener, SIGNAL(readyRead()), this, SLOT(broadcastSend()));
 }
 
 void UDPBroadcast::broadcastSend(){
@@ -28,22 +31,35 @@ void UDPBroadcast::broadcastSend(){
 
         data.resize(socketListener->pendingDatagramSize());
         socketListener->readDatagram(data.data(), data.size(), &adr, &port);
-        //qDebug() << adr;
-        //qDebug() << port;
-        j++;
+
+        User sender;
+        for (int i = 0; i < userManager->users.size(); ++i){
+            sender = userManager->users.at(i);
+            if (sender.getIp() == adr){
+                if (sender.getIsBanned()){
+                    return;
+                }
+                else break;
+            }
+        }
+
         for (int i = 0; i < userManager->users.size(); ++i){
             User user = userManager->users.at(i);
-            if (user.getIp() != adr)
+            if (user.getChannelName() != sender.getChannelName()) continue;
+            else if (user.getIsBanned()) continue;
+            else if (user.getIp() != adr)
             {
-                if (!user.getIsBanned()){
-                    socketSender = new QUdpSocket();
-                    socketSender->connectToHost(user.getIp(), 1002);
-                    socketSender->write(data.data(), data.size());
-                }
+                socketSender = new QUdpSocket();
+                socketSender->connectToHost(user.getIp(), this->port - 1);
+                socketSender->write(data.data(), data.size());
+                socketSender->close();
+                delete socketSender;
+                break;
             }
         }
     }
 }
+
 
 //void UDPBroadcast::init(){
 //    QAudioFormat format;

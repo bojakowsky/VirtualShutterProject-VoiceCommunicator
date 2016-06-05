@@ -12,14 +12,14 @@ public:
     ClientTask();
     void setManagers(ChannelsManager *channelsManager, UserManager *userManager);
 signals:
-    void Result(std::string Structure);
+    void Result(QString Structure);
 
 protected:
     void run();
 
 private:
-    ChannelsManager *channelsManager;
-    UserManager *userManager;
+    ChannelsManager *channelsManager = 0;
+    UserManager *userManager = 0;
 };
 
 #endif // CLIENTTASK_H

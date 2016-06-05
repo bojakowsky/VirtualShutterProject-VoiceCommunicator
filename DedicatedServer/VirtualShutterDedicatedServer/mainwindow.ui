@@ -86,7 +86,7 @@ font: 75 13pt &quot;Cantarell&quot;;</string>
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>180</width>
+        <width>220</width>
         <height>40</height>
        </rect>
       </property>
@@ -114,11 +114,14 @@ font: 13pt &quot;Cantarell&quot;;</string>
      <widget class="QLineEdit" name="serverNameEdit">
       <property name="geometry">
        <rect>
-        <x>190</x>
+        <x>230</x>
         <y>0</y>
-        <width>280</width>
+        <width>240</width>
         <height>30</height>
        </rect>
+      </property>
+      <property name="text">
+       <string>TIP_Server</string>
       </property>
       <property name="frame">
        <bool>false</bool>
@@ -130,9 +133,9 @@ font: 13pt &quot;Cantarell&quot;;</string>
      <widget class="Line" name="line">
       <property name="geometry">
        <rect>
-        <x>190</x>
+        <x>230</x>
         <y>32</y>
-        <width>280</width>
+        <width>240</width>
         <height>2</height>
        </rect>
       </property>
@@ -164,7 +167,7 @@ font: 13pt &quot;Cantarell&quot;;</string>
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>180</width>
+        <width>220</width>
         <height>40</height>
        </rect>
       </property>
@@ -185,18 +188,21 @@ font: 13pt &quot;Cantarell&quot;;</string>
 font: 13pt &quot;Cantarell&quot;;</string>
        </property>
        <property name="text">
-        <string>IP</string>
+        <string>IP ADDRESS</string>
        </property>
       </widget>
      </widget>
      <widget class="QLineEdit" name="ipEdit">
       <property name="geometry">
        <rect>
-        <x>190</x>
+        <x>230</x>
         <y>0</y>
-        <width>280</width>
+        <width>240</width>
         <height>30</height>
        </rect>
+      </property>
+      <property name="text">
+       <string>192.168.0.100</string>
       </property>
       <property name="frame">
        <bool>false</bool>
@@ -208,9 +214,9 @@ font: 13pt &quot;Cantarell&quot;;</string>
      <widget class="Line" name="line_3">
       <property name="geometry">
        <rect>
-        <x>190</x>
+        <x>230</x>
         <y>32</y>
-        <width>280</width>
+        <width>240</width>
         <height>2</height>
        </rect>
       </property>
@@ -242,7 +248,7 @@ font: 13pt &quot;Cantarell&quot;;</string>
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>180</width>
+        <width>220</width>
         <height>40</height>
        </rect>
       </property>
@@ -270,11 +276,14 @@ font: 13pt &quot;Cantarell&quot;;</string>
      <widget class="QLineEdit" name="portEdit">
       <property name="geometry">
        <rect>
-        <x>190</x>
+        <x>230</x>
         <y>0</y>
-        <width>280</width>
+        <width>240</width>
         <height>30</height>
        </rect>
+      </property>
+      <property name="text">
+       <string>1000</string>
       </property>
       <property name="frame">
        <bool>false</bool>
@@ -286,9 +295,9 @@ font: 13pt &quot;Cantarell&quot;;</string>
      <widget class="Line" name="line_4">
       <property name="geometry">
        <rect>
-        <x>190</x>
+        <x>230</x>
         <y>32</y>
-        <width>280</width>
+        <width>240</width>
         <height>2</height>
        </rect>
       </property>
@@ -320,7 +329,7 @@ font: 13pt &quot;Cantarell&quot;;</string>
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>180</width>
+        <width>220</width>
         <height>40</height>
        </rect>
       </property>
@@ -341,18 +350,21 @@ font: 13pt &quot;Cantarell&quot;;</string>
 font: 13pt &quot;Cantarell&quot;;</string>
        </property>
        <property name="text">
-        <string>USERS LIMIT</string>
+        <string>ALL USERS LIMIT</string>
        </property>
       </widget>
      </widget>
      <widget class="QLineEdit" name="limitEdit">
       <property name="geometry">
        <rect>
-        <x>190</x>
+        <x>230</x>
         <y>0</y>
-        <width>280</width>
+        <width>240</width>
         <height>30</height>
        </rect>
+      </property>
+      <property name="text">
+       <string>32</string>
       </property>
       <property name="frame">
        <bool>false</bool>
@@ -364,9 +376,9 @@ font: 13pt &quot;Cantarell&quot;;</string>
      <widget class="Line" name="line_5">
       <property name="geometry">
        <rect>
-        <x>190</x>
+        <x>230</x>
         <y>32</y>
-        <width>280</width>
+        <width>240</width>
         <height>2</height>
        </rect>
       </property>
@@ -427,7 +439,7 @@ font: 13pt &quot;Cantarell&quot;;</string>
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>180</width>
+        <width>220</width>
         <height>40</height>
        </rect>
       </property>
@@ -455,9 +467,9 @@ font: 13pt &quot;Cantarell&quot;;</string>
      <widget class="QLineEdit" name="passwordEdit">
       <property name="geometry">
        <rect>
-        <x>190</x>
+        <x>230</x>
         <y>0</y>
-        <width>280</width>
+        <width>240</width>
         <height>30</height>
        </rect>
       </property>
@@ -471,9 +483,9 @@ font: 13pt &quot;Cantarell&quot;;</string>
      <widget class="Line" name="line_6">
       <property name="geometry">
        <rect>
-        <x>190</x>
+        <x>230</x>
         <y>32</y>
-        <width>280</width>
+        <width>240</width>
         <height>2</height>
        </rect>
       </property>
@@ -869,7 +881,7 @@ color: rgb(255, 255, 255);</string>
     <property name="styleSheet">
      <string notr="true">background-color: rgb(221, 220, 220);</string>
     </property>
-    <widget class="QListView" name="activitiesList">
+    <widget class="QListWidget" name="activitiesList">
      <property name="geometry">
       <rect>
        <x>20</x>
@@ -888,7 +900,7 @@ color: rgb(255, 255, 255);</string>
       <enum>QFrame::Plain</enum>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_14">
+    <widget class="QPushButton" name="clearActivitiesButton">
      <property name="geometry">
       <rect>
        <x>350</x>
@@ -928,7 +940,7 @@ color: rgb(255, 255, 255);</string>
     <property name="styleSheet">
      <string notr="true">background-color: rgb(221, 220, 220);</string>
     </property>
-    <widget class="QListView" name="eventsList">
+    <widget class="QListWidget" name="eventsList">
      <property name="geometry">
       <rect>
        <x>20</x>
@@ -947,7 +959,7 @@ color: rgb(255, 255, 255);</string>
       <enum>QFrame::Plain</enum>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_15">
+    <widget class="QPushButton" name="clearEventButton">
      <property name="geometry">
       <rect>
        <x>350</x>
@@ -978,11 +990,11 @@ color: rgb(255, 255, 255);</string>
    <zorder>widget</zorder>
    <zorder>widget_2</zorder>
    <zorder>widget_4</zorder>
-   <zorder>activitiesWidget</zorder>
-   <zorder>eventsWidget</zorder>
-   <zorder>generalWidget</zorder>
    <zorder>channelsWidget</zorder>
    <zorder>usersWidget</zorder>
+   <zorder>generalWidget</zorder>
+   <zorder>activitiesWidget</zorder>
+   <zorder>eventsWidget</zorder>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">

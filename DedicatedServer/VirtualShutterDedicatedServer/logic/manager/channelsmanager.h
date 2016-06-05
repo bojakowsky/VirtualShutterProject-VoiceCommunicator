@@ -1,10 +1,10 @@
 #ifndef CHANNELSMANAGER_H
 #define CHANNELSMANAGER_H
 #include <stdio.h>
-#include <string>
-#include <vector>
 #include "logic/model/channel.h"
 #include "logic/manager/usermanager.h"
+#include <string>
+#include <vector>
 class ChannelsManager
 {
 public:
@@ -14,8 +14,10 @@ public:
     void Remove(int i);
     void Update(int i, Channel ch);
     Channel Get(int i);
-    Channel TryGet(std::string channelName, std::string password, UserManager *usrManager);
+    Channel TryMove(std::string channelName, std::string password, UserManager *usrManager);
     std::string BuildChannelStructure(UserManager *usrManager);
+
+    int getChannelsCount();
 private:
     std::vector<Channel> channels;
 };
