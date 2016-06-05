@@ -85,7 +85,7 @@ void MainWindow::setManager(ApplicationManager *value)
 void MainWindow::closing()
 {
     delete ui;
-    delete conversation;
+    //delete conversation;
     delete addEditServerDialog;
     delete informDialog;
     delete manager;

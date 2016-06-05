@@ -11,13 +11,15 @@ TCPClient::~TCPClient()
 
     //OperationsLogger::write("Info", "Disconnected from server", list);
     //socket->disconnectFromHost();
+    socket->disconnect();
     delete socket;
     socket = 0;
-
 }
 
 void TCPClient::Connect(QHostAddress address, int port, std::string nickname, std::string password)
 {
+    this->address = address;
+    this->port = port;
     socket = new QTcpSocket(this);
     this->nickname = nickname;
     this->password = password;
@@ -70,6 +72,9 @@ void TCPClient::disconnected()
 {
     qDebug("client disconnected");
     OperationsLogger::write("Info", "You have been disconnect", list);
+    udpSender->setIsMicMuted(true);
+    udpPlayer->setIsPlayerMuted(true);
+    clear();
 }
 
 void TCPClient::readyRead()
@@ -82,9 +87,13 @@ void TCPClient::readyRead()
     }
     else if (data == "Banned") {
         OperationsLogger::write("Banned", "You have been banned on server", list);
+        clear();
     }
     else if (data == "Hi") {
         OperationsLogger::write("Hi", "Welcome to the server", list);
+        udpSender->Connect(address, port);
+        udpPlayer->Listen(udpSender->getLocalAddress(), port-1);
+
     }
     else if (data == "UnknownError"){
         OperationsLogger::write("UnknownError", "Unknown error occured", list);
@@ -113,6 +122,16 @@ void TCPClient::readyRead()
 void TCPClient::info()
 {
     socket->write("Info");
+}
+
+void TCPClient::setUdpSender(UdpSender *value)
+{
+    udpSender = value;
+}
+
+void TCPClient::setUdpPlayer(UDPPlayer *value)
+{
+    udpPlayer = value;
 }
 
 QListWidget *TCPClient::getList() const

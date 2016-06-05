@@ -42,6 +42,14 @@ void UDPPlayer::Disconnect()
         delete socket;
         socket = NULL;
     }
+
+    if (device)
+    {
+        device->close();
+        delete device;
+        device = NULL;
+    }
+
     if (output)
     {
         output->disconnect();
@@ -49,7 +57,10 @@ void UDPPlayer::Disconnect()
         output = NULL;
     }
 
-    qDebug("UDPPlayer dead");
+
+
+
+    //qDebug("UDPPlayer dead");
 }
 
 void UDPPlayer::playData()
@@ -57,7 +68,6 @@ void UDPPlayer::playData()
     //You need to read datagrams from the udp socket
     while (socket->hasPendingDatagrams())
     {
-        //qDebug("playing..");
         QByteArray data;
         data.resize(socket->pendingDatagramSize());
         socket->readDatagram(data.data(), data.size());

@@ -37,6 +37,8 @@ private:
 
     ApplicationManager *manager = 0;
     QTimer *listTimer = 0;
+
+
 };
 
 #endif // CONVERSATION_H

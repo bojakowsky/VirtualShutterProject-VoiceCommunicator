@@ -4,5 +4,5 @@
 
 void OperationsLogger::write(QString type, QString log, QListWidget *list)
 {
-    list->addItem("["+type+"] " + log);
+    if (list) list->addItem("["+type+"] " + log);
 }

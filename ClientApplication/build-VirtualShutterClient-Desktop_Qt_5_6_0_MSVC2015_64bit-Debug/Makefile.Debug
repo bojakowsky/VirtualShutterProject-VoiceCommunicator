@@ -470,6 +470,9 @@ debug\moc_mainwindow.cpp: C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\QMainW
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QString \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QFileInfo \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qfileinfo.h \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QCoreApplication \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qcoreapplication.h \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qeventloop.h \
 		..\VirtualShutterClient\logic\fieldvalidator.h \
 		..\VirtualShutterClient\logic\connection\tcpclient.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtNetwork\QTcpSocket \
@@ -561,9 +564,7 @@ debug\moc_mainwindow.cpp: C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\QMainW
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qjsondocument.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qjsonobject.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qabstracteventdispatcher.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qeventloop.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qabstractnativeeventfilter.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qcoreapplication.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qmath.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qmetaobject.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qmimedata.h \
@@ -831,6 +832,9 @@ debug\moc_conversation.cpp: ..\VirtualShutterClient\logic\manager\applicationman
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QString \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QFileInfo \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qfileinfo.h \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QCoreApplication \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qcoreapplication.h \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qeventloop.h \
 		..\VirtualShutterClient\logic\fieldvalidator.h \
 		..\VirtualShutterClient\logic\connection\tcpclient.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtNetwork\QTcpSocket \
@@ -952,9 +956,7 @@ debug\moc_conversation.cpp: ..\VirtualShutterClient\logic\manager\applicationman
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qjsondocument.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qjsonobject.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qabstracteventdispatcher.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qeventloop.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qabstractnativeeventfilter.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qcoreapplication.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qmath.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qmetaobject.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qmimedata.h \
@@ -1156,6 +1158,22 @@ debug\moc_tcpclient.cpp: C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QObject \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qtabbar.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qtabwidget.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qrubberband.h \
+		..\VirtualShutterClient\logic\connection\udpplayer.h \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtMultimedia\QAudioOutput \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtMultimedia\qaudiooutput.h \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtMultimedia\qtmultimediadefs.h \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtMultimedia\qmultimedia.h \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtMultimedia\qaudio.h \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtMultimedia\qaudioformat.h \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtMultimedia\qaudiodeviceinfo.h \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtMultimedia\QAudioInput \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtMultimedia\qaudioinput.h \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtMultimedia\QAudioFormat \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtNetwork\QUdpSocket \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtNetwork\qudpsocket.h \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtNetwork\QNetworkInterface \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtNetwork\qnetworkinterface.h \
+		..\VirtualShutterClient\logic\connection\udpsender.h \
 		..\VirtualShutterClient\logic\connection\tcpclient.h
 	C:\Qt\Qt5.6.0\5.6\msvc2015_64\bin\moc.exe $(DEFINES) -D_MSC_VER=1900 -D_WIN32 -D_WIN64 -IC:/Qt/Qt5.6.0/5.6/msvc2015_64/mkspecs/win32-msvc2015 -IC:/Users/warfury/Desktop/VirtualShutter/VirtualShutterProject-VoiceCommunicator/ClientApplication/VirtualShutterClient -IC:/Qt/Qt5.6.0/5.6/msvc2015_64/include -IC:/Qt/Qt5.6.0/5.6/msvc2015_64/include/QtMultimedia -IC:/Qt/Qt5.6.0/5.6/msvc2015_64/include/QtWidgets -IC:/Qt/Qt5.6.0/5.6/msvc2015_64/include/QtGui -IC:/Qt/Qt5.6.0/5.6/msvc2015_64/include/QtANGLE -IC:/Qt/Qt5.6.0/5.6/msvc2015_64/include/QtNetwork -IC:/Qt/Qt5.6.0/5.6/msvc2015_64/include/QtCore -I. ..\VirtualShutterClient\logic\connection\tcpclient.h -o debug\moc_tcpclient.cpp
 
@@ -1616,6 +1634,9 @@ debug\main.obj: ..\VirtualShutterClient\main.cpp ../VirtualShutterClient/mainwin
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QString \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QFileInfo \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qfileinfo.h \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QCoreApplication \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qcoreapplication.h \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qeventloop.h \
 		../VirtualShutterClient/logic/fieldvalidator.h \
 		../VirtualShutterClient/logic/connection/tcpclient.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtNetwork\QTcpSocket \
@@ -1707,9 +1728,7 @@ debug\main.obj: ..\VirtualShutterClient\main.cpp ../VirtualShutterClient/mainwin
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qjsondocument.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qjsonobject.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qabstracteventdispatcher.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qeventloop.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qabstractnativeeventfilter.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qcoreapplication.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qmath.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qmetaobject.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qmimedata.h \
@@ -1900,6 +1919,9 @@ debug\mainwindow.obj: ..\VirtualShutterClient\mainwindow.cpp ../VirtualShutterCl
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QString \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QFileInfo \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qfileinfo.h \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QCoreApplication \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qcoreapplication.h \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qeventloop.h \
 		../VirtualShutterClient/logic/fieldvalidator.h \
 		../VirtualShutterClient/logic/connection/tcpclient.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtNetwork\QTcpSocket \
@@ -1991,9 +2013,7 @@ debug\mainwindow.obj: ..\VirtualShutterClient\mainwindow.cpp ../VirtualShutterCl
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qjsondocument.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qjsonobject.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qabstracteventdispatcher.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qeventloop.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qabstractnativeeventfilter.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qcoreapplication.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qmath.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qmetaobject.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qmimedata.h \
@@ -2190,6 +2210,9 @@ debug\addeditserverdialog.obj: ..\VirtualShutterClient\MainWindow\addeditserverd
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QString \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QFileInfo \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qfileinfo.h \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QCoreApplication \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qcoreapplication.h \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qeventloop.h \
 		../VirtualShutterClient/logic/connection/tcpclient.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtNetwork\QTcpSocket \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtNetwork\qtcpsocket.h \
@@ -2272,9 +2295,7 @@ debug\addeditserverdialog.obj: ..\VirtualShutterClient\MainWindow\addeditserverd
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qjsondocument.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qjsonobject.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qabstracteventdispatcher.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qeventloop.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qabstractnativeeventfilter.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qcoreapplication.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qmath.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qmetaobject.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qmimedata.h \
@@ -2422,6 +2443,9 @@ debug\conversation.obj: ..\VirtualShutterClient\conversation.cpp ../VirtualShutt
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QString \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QFileInfo \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qfileinfo.h \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QCoreApplication \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qcoreapplication.h \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qeventloop.h \
 		../VirtualShutterClient/logic/fieldvalidator.h \
 		../VirtualShutterClient/logic/connection/tcpclient.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtNetwork\QTcpSocket \
@@ -2543,9 +2567,7 @@ debug\conversation.obj: ..\VirtualShutterClient\conversation.cpp ../VirtualShutt
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qjsondocument.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qjsonobject.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qabstracteventdispatcher.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qeventloop.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qabstractnativeeventfilter.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qcoreapplication.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qmath.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qmetaobject.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qmimedata.h \
@@ -2746,7 +2768,23 @@ debug\tcpclient.obj: ..\VirtualShutterClient\logic\connection\tcpclient.cpp ../V
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qstyle.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qtabbar.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qtabwidget.h \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qrubberband.h
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtWidgets\qrubberband.h \
+		../VirtualShutterClient/logic/connection/udpplayer.h \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtMultimedia\QAudioOutput \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtMultimedia\qaudiooutput.h \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtMultimedia\qtmultimediadefs.h \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtMultimedia\qmultimedia.h \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtMultimedia\qaudio.h \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtMultimedia\qaudioformat.h \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtMultimedia\qaudiodeviceinfo.h \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtMultimedia\QAudioInput \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtMultimedia\qaudioinput.h \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtMultimedia\QAudioFormat \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtNetwork\QUdpSocket \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtNetwork\qudpsocket.h \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtNetwork\QNetworkInterface \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtNetwork\qnetworkinterface.h \
+		../VirtualShutterClient/logic/connection/udpsender.h
 
 debug\udpplayer.obj: ..\VirtualShutterClient\logic\connection\udpplayer.cpp ../VirtualShutterClient/logic/connection/udpplayer.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QObject \
@@ -2998,6 +3036,9 @@ debug\applicationmanager.obj: ..\VirtualShutterClient\logic\manager\applicationm
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QString \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QFileInfo \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qfileinfo.h \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QCoreApplication \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qcoreapplication.h \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qeventloop.h \
 		../VirtualShutterClient/logic/fieldvalidator.h \
 		../VirtualShutterClient/logic/connection/tcpclient.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtNetwork\QTcpSocket \
@@ -3153,7 +3194,10 @@ debug\filesmanager.obj: ..\VirtualShutterClient\logic\manager\filesmanager.cpp .
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qfiledevice.h \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QString \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QFileInfo \
-		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qfileinfo.h
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qfileinfo.h \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QCoreApplication \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qcoreapplication.h \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qeventloop.h
 
 debug\favouritesmanager.obj: ..\VirtualShutterClient\logic\manager\favouritesmanager.cpp ../VirtualShutterClient/logic/manager/favouritesmanager.h \
 		../VirtualShutterClient/logic/model/server.h \
@@ -3237,6 +3281,9 @@ debug\favouritesmanager.obj: ..\VirtualShutterClient\logic\manager\favouritesman
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QString \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QFileInfo \
 		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qfileinfo.h \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\QCoreApplication \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qcoreapplication.h \
+		C:\Qt\Qt5.6.0\5.6\msvc2015_64\include\QtCore\qeventloop.h \
 		../VirtualShutterClient/logic/fieldvalidator.h
 
 debug\informdialog.obj: ..\VirtualShutterClient\informdialog.cpp ../VirtualShutterClient/informdialog.h \

@@ -19,8 +19,8 @@ public:
     void setIsMicMuted(bool value);
 
 private:
-    QAudioInput* input;
-    QUdpSocket* socket;
+    QAudioInput* input = 0;
+    QUdpSocket* socket = 0;
     QAudioFormat format;
 
     QHostAddress localAddress;

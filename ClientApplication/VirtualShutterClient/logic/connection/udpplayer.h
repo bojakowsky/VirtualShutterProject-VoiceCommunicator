@@ -25,9 +25,9 @@ private slots:
     void playData();
 
 private:
-    QAudioOutput *output;
-    QUdpSocket *socket;
-    QIODevice *device;
+    QAudioOutput *output = 0;
+    QUdpSocket *socket = 0;
+    QIODevice *device = 0;
 
     bool isPlayerMuted = false;
     QHostAddress local;

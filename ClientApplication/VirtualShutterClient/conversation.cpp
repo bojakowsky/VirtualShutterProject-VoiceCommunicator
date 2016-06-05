@@ -9,6 +9,7 @@ Conversation::Conversation(QWidget *parent) :
     listTimer = new QTimer(this);
     connect(listTimer, SIGNAL(timeout()), this, SLOT(refreshList()));
     listTimer->start(1700);
+
 }
 
 Conversation::~Conversation()
@@ -16,7 +17,8 @@ Conversation::~Conversation()
     qDebug("Fin");
     listTimer->stop();
     ui->conversationList->clear();
-    manager->getTcpClient()->clear();
+    //if (manager)
+    //    manager->getTcpClient()->clear();
     delete listTimer;
     delete ui;
 
@@ -37,9 +39,10 @@ void Conversation::on_muteButton_clicked()
 
 void Conversation::on_disconnectButton_clicked()
 {
-    manager->getTcpClient()->Disconnect();
     manager->getUdpSender()->Disconnect();
     manager->getUdpPlayer()->Disconnect();
+    manager->getTcpClient()->Disconnect();
+
 
     parentWidget()->show();
     delete this;
@@ -68,10 +71,14 @@ void Conversation::setManager(ApplicationManager *value)
 
 void Conversation::Live(Server server, std::string nickname)
 {
+
+    manager->getTcpClient()->setUdpSender(manager->getUdpSender());
+    manager->getTcpClient()->setUdpPlayer(manager->getUdpPlayer());
     manager->getTcpClient()->setList(ui->logList);
     manager->getTcpClient()->Connect(server.getIp(), server.getPort(), nickname, server.getPassword());
-    manager->getUdpSender()->Connect(server.getIp(), server.getPort());
-    manager->getUdpPlayer()->Listen(manager->getUdpSender()->getLocalAddress(), server.getPort()-1);
+
+    //manager->getUdpSender()->Connect(server.getIp(), server.getPort());
+    //manager->getUdpPlayer()->Listen(manager->getUdpSender()->getLocalAddress(), server.getPort()-1);
 
     std::string infoLabel = server.getName() + " - " + server.getIp().toString().toStdString() + ":" + std::to_string(server.getPort());
     ui->serverInfoLabel->setText(QString::fromStdString(infoLabel.c_str()));

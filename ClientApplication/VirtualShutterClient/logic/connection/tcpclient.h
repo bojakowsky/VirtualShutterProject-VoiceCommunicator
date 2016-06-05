@@ -7,6 +7,8 @@
 #include <QTimer>
 #include "logic/helper.h"
 #include "logic/operationslogger.h"
+#include "udpplayer.h"
+#include "udpsender.h"
 class TCPClient : public QObject
 {
     Q_OBJECT
@@ -23,6 +25,9 @@ public:
     void move(std::string channelName, std::string password="");
     QListWidget *getList() const;
     void setList(QListWidget *value);
+
+    void setUdpPlayer(UDPPlayer *value);
+    void setUdpSender(UdpSender *value);
 
 signals:
 
@@ -41,6 +46,11 @@ private:
     std::vector<std::string> conversationData;
 
     QListWidget *list;
+
+    UDPPlayer *udpPlayer = 0;
+    UdpSender *udpSender = 0;
+    QHostAddress address;
+    int port;
 };
 
 #endif // TCPCLIENT_H

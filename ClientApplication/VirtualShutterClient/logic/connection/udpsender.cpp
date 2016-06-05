@@ -68,9 +68,15 @@ void UdpSender::setIsMicMuted(bool value)
 {
     isMicMuted = value;
     if (value == true)
-        input->stop();
+    {
+        if (input)
+            input->stop();
+    }
     else
-        input->start(socket);
+    {
+        if (input)
+            input->start(socket);
+    }
 
 }
 
