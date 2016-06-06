@@ -2,7 +2,7 @@
 Yet another studies project - TeamSpeak like communicator written in C++ Qt.
 
 To build exe run from command prompt: <br/>
-C:\Qt\Qt5.6.0\5.6\msvc2015_64\bin (or similar pah) > windeployqt --qmldir <project source> <project release exe>
+C:\Qt\Qt5.6.0\5.6\msvc2015_64\bin (or similar pah) > windeployqt --qmldir \<project source\> \<project release exe\>
 
 However, if you wish to use our version, you can download it from here: <br/>
 https://drive.google.com/drive/folders/0B5qz9TNgnJ5gTjB0Ql9ia1hPWGc
