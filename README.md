@@ -10,6 +10,8 @@ Also in link above some screenshots are available - check them out.
 Application was tested on Windows 7 and Windows 10.
 
 # Two words about using it
+I have tested it only on local network, all PCs were in the same subnet. \n 
+Sadly, I'm behind NAT, forwarding blocked ;'(.
 ## Client
 * As simple as it is - type server address, click connect. 
 * Make sure ports are opened, not blocked by firewall - if you connect to server on port 1000 then opened should be 1000 and 999 for both UDP and TCP.
