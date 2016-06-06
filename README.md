@@ -10,7 +10,7 @@ Also in link above some screenshots are available - check them out.
 Application was tested on Windows 7 and Windows 10.
 
 # Two words about using it
-I have tested it only on local network, all PCs were in the same subnet. \n 
+I have tested it only on local network, all PCs were in the same subnet. <br/>
 Sadly, I'm behind NAT, forwarding blocked ;'(.
 ## Client
 * As simple as it is - type server address, click connect. 
