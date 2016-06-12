@@ -7,7 +7,8 @@ C:\Qt\Qt5.6.0\5.6\msvc2015_64\bin (or similar pah) > windeployqt --qmldir \<proj
 However, if you wish to use our version, you can download it from here: <br/>
 https://drive.google.com/drive/folders/0B5qz9TNgnJ5gTjB0Ql9ia1hPWGc <br/>
 Also in link above some screenshots are available - check them out.
-Application was tested on Windows 7 and Windows 10.
+Application was tested on Windows 7 and Windows 10. <br/>
+Client newest code can be found in DevClient branch, server's newest code in DevServer branch.
 
 # Two words about using it
 I have tested it only on local network, all PCs were in the same subnet. <br/>
